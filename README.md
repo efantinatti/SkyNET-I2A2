@@ -14,4 +14,5 @@
 - **Ernani Fantinatti**
 - **Fábio Rhein**
 - **Alberto Côrtes**
+- **Maikon Renner**
 - **\<your name here\>**
