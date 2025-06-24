@@ -1,6 +1,6 @@
 # SkyNET-I2A2
 
-![SkyNET Logo](Document/Logo/SkyNET_Logo.png)
+![SkyNET Logo](docs/Logo/SkyNET_Logo.png)
 
 
 
