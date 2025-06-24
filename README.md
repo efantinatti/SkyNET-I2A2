@@ -11,7 +11,10 @@
 ---
 
 ## Members
-- **Ernani Fantinatti**
+- **Ernani Fantinatti (Group Leader)**
 - **Fábio Rhein**
+- **Iluska Gastaldelle**
 - **Alberto Côrtes**
-- **\<your name here\>**
+- **Luiz Garcia**
+- **Raymundo Domício**
+
