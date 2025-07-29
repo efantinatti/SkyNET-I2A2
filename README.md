@@ -16,5 +16,3 @@
 - **Iluska Gastaldelle**
 - **Alberto Côrtes**
 - **Luiz Garcia**
-- **Raymundo Domício**
-
