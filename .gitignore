@@ -34,5 +34,5 @@ ehthumbs.db
 Icon?
 
 # User files
-*.xlxs
+#*.xlsx
 *.csv
