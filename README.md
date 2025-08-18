@@ -6,13 +6,12 @@
 
 
 ## Agentic AI System
-**Cohort:** April 2025
+**Cohort:** April 2025 - September 2025
 
 ---
 
-## Members
+## Members as of August 2025
 - **Ernani Fantinatti (Group Leader)**
 - **Fábio Rhein**
-- **Iluska Gastaldelle**
 - **Alberto Côrtes**
 - **Luiz Garcia**
