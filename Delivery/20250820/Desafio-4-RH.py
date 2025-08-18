@@ -6,12 +6,13 @@ import configparser
 import os
 import requests
 import json
+from Libs.email_library import send_process_completion_email
 
 # %%
 # Carrega configurações do arquivo INI
 def load_config():
     config = configparser.ConfigParser()
-    config_path = os.path.join(os.path.dirname(__file__), 'config.ini')
+    config_path = os.path.join(os.path.dirname(__file__), 'Config', 'config.ini')
     
     if not os.path.exists(config_path):
         raise FileNotFoundError(f"Arquivo de configuração não encontrado: {config_path}")
@@ -152,11 +153,11 @@ def executar_automacao_vr():
         ]
 
         # Carrega e valida cada DataFrame
-        df_ativos = pd.read_excel('ATIVOS.xlsx', sheet_name='ATIVOS')
+        df_ativos = pd.read_excel('Import/ATIVOS.xlsx', sheet_name='ATIVOS')
         validation_result = validate_with_llm(df_ativos.head().to_dict(), validation_rules)
         print("\nValidação df_ativos:", validation_result['alertas'])
 
-        df_dias_uteis = pd.read_excel('Base dias uteis.xlsx', sheet_name='Planilha1')
+        df_dias_uteis = pd.read_excel('Import/Base dias uteis.xlsx', sheet_name='Planilha1')
         validation_result = validate_with_llm(df_dias_uteis.head().to_dict(), [
             "Feriados devem ter data válida",
             "Cada estado deve ter seus feriados específicos",
@@ -164,18 +165,18 @@ def executar_automacao_vr():
         ])
         print("\nValidação df_dias_uteis:", validation_result['alertas'])
 
-        df_sindicato_valor = pd.read_excel('Base sindicato x valor.xlsx', sheet_name='Planilha1')
-        df_desligados = pd.read_excel('DESLIGADOS.xlsx', sheet_name='DESLIGADOS ')
+        df_sindicato_valor = pd.read_excel('Import/Base sindicato x valor.xlsx', sheet_name='Planilha1')
+        df_desligados = pd.read_excel('Import/DESLIGADOS.xlsx', sheet_name='DESLIGADOS ')
         validation_result = validate_with_llm(df_desligados.head().to_dict(), [
             "Datas de demissão devem ser válidas",
             "Status de comunicado deve estar preenchido"
         ])
         print("\nValidação df_desligados:", validation_result['alertas'])
 
-        df_estagio = pd.read_excel('ESTÁGIO.xlsx', sheet_name='Planilha1')
-        df_exterior = pd.read_excel('EXTERIOR.xlsx', sheet_name='Planilha1', header=None)
+        df_estagio = pd.read_excel('Import/ESTÁGIO.xlsx', sheet_name='Planilha1')
+        df_exterior = pd.read_excel('Import/EXTERIOR.xlsx', sheet_name='Planilha1', header=None)
         
-        df_ferias = pd.read_excel('FÉRIAS.xlsx', sheet_name='Planilha1')
+        df_ferias = pd.read_excel('Import/FÉRIAS.xlsx', sheet_name='Planilha1')
         validation_result = validate_with_llm(df_ferias.head().to_dict(), [
             "Dias de férias devem estar entre 0 e 30",
             "Períodos de férias não podem se sobrepor",
@@ -183,16 +184,16 @@ def executar_automacao_vr():
         ])
         print("\nValidação df_ferias:", validation_result['alertas'])
 
-        df_admissao_abril = pd.read_excel('ADMISSÃO ABRIL.xlsx', sheet_name='Planilha1')
+        df_admissao_abril = pd.read_excel('Import/ADMISSÃO ABRIL.xlsx', sheet_name='Planilha1')
         validation_result = validate_with_llm(df_admissao_abril.head().to_dict(), [
             "Data de admissão deve ser válida",
             "Não pode haver duplicidade de matrícula"
         ])
         print("\nValidação df_admissao_abril:", validation_result['alertas'])
 
-        df_afastamentos = pd.read_excel('AFASTAMENTOS.xlsx', sheet_name='Planilha1')
-        df_aprendiz = pd.read_excel('APRENDIZ.xlsx', sheet_name='Planilha1')
-        df_template = pd.read_excel('VR MENSAL 05.2025.xlsx', sheet_name='VR MENSAL 05.2025')
+        df_afastamentos = pd.read_excel('Import/AFASTAMENTOS.xlsx', sheet_name='Planilha1')
+        df_aprendiz = pd.read_excel('Import/APRENDIZ.xlsx', sheet_name='Planilha1')
+        df_template = pd.read_excel('Import/VR MENSAL 05.2025.xlsx', sheet_name='VR MENSAL 05.2025')
 
         # Aplicando correções baseadas no Pandas 2.0
         print("\nAplicando correções automáticas...")
@@ -336,18 +337,36 @@ def executar_automacao_vr():
         output_df = output_df[final_columns_order]
 
         # --- 5. Geração do Arquivo de Saída ---
-        output_filename = 'VR_MENSAL_05_2025_FINAL.csv'
+        output_filename = 'Output/VR_MENSAL_05_2025_FINAL.csv'
         output_df.to_csv(output_filename, index=False, decimal=',', sep=';')
         
         print("-" * 50)
         print("PROCESSO CONCLUÍDO COM SUCESSO!")
         print(f"Arquivo '{output_filename}' gerado, contendo {len(output_df)} registros válidos.")
         print("-" * 50)
+        
+        # --- 6. Envio de Notificação por Email ---
+        print("Enviando notificação por email...")
+        try:
+            email_sent = send_process_completion_email(
+                filename=output_filename,
+                attach_file=True
+            )
+            if email_sent:
+                print("✅ Email de notificação enviado com sucesso!")
+            else:
+                print("⚠️ Falha ao enviar email de notificação.")
+        except Exception as e:
+            print(f"⚠️ Erro ao enviar email: {e}")
+        
+        return output_filename
 
     except FileNotFoundError as e:
-        print(f"\nERRO: Arquivo não encontrado - {e.filename}. Verifique se todos os 11 arquivos CSV estão na mesma pasta que o script.")
+        print(f"\nERRO: Arquivo não encontrado - {e.filename}. Verifique se todos os arquivos Excel estão na pasta 'Import/' e se as pastas 'Import/' e 'Output/' existem.")
+        return None
     except Exception as e:
         print(f"\nERRO INESPERADO: Ocorreu um erro durante a execução do agente. Detalhes: {e}")
+        return None
 
 # Executa a função principal do agente
 if __name__ == "__main__":
