@@ -12,9 +12,15 @@ Date: 2025-08-19
 Version: 2.1 (Enhanced Legacy Compatibility)
 """
 
+import os
 import sys
 import argparse
+import logging
 from pathlib import Path
+
+# Suppress numexpr info messages and other warnings
+os.environ['NUMEXPR_MAX_THREADS'] = '6'
+logging.getLogger('numexpr.utils').setLevel(logging.WARNING)
 
 # Add the Libs directory to the Python path
 sys.path.append(str(Path(__file__).parent / 'Libs'))

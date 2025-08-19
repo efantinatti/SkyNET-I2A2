@@ -5,6 +5,7 @@ Main orchestrator that coordinates all services following Clean Architecture pri
 Implements Facade pattern for simplified client interface.
 """
 
+import logging
 from pathlib import Path
 from typing import Optional
 from .config_manager import ConfigManager
@@ -14,6 +15,9 @@ from .business_logic_service import DataProcessingService
 from .output_service import OutputGenerationService
 from .email_library import EmailNotifier
 from .file_integrity_service import FileIntegrityService
+
+# Suppress numexpr info messages
+logging.getLogger('numexpr.utils').setLevel(logging.WARNING)
 
 
 class HRAutomationOrchestrator:

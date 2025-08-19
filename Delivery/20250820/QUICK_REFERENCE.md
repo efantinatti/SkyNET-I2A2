@@ -1,6 +1,10 @@
 # SkyNET I2A2 HR Automation - Quick Reference
 
-## ✅ **FIXED: Force Parameter Now Working!**
+## ✅ **FIXED: Warning Messages Resolved!**
+
+The following dependency warnings have been completely resolved:
+- ❌ ~~`RequestsDependencyWarning: Unable to find acceptable character detection dependency`~~
+- ❌ ~~`INFO:numexpr.utils:NumExpr defaulting to 6 threads`~~
 
 Both `--force` and `--help` parameters are now properly implemented in the legacy interface.
 
