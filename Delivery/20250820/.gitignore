@@ -1,6 +1,5 @@
 # File integrity checksums (locally generated, should not be committed)
 md5/*.md5
-md5/
 
 # Python cache files
 __pycache__/
