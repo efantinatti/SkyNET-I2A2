@@ -1,0 +1,32 @@
+# File integrity checksums (locally generated, should not be committed)
+md5/*.md5
+md5/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# System files
+.DS_Store
+Thumbs.db
+
+# User data files (contain sensitive information)
+Import/*.xlsx
+Output/*.csv
+
+# Configuration files with sensitive data
+Config/config.ini
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-*

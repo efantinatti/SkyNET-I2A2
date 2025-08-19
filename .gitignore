@@ -36,3 +36,6 @@ Icon?
 # User files
 *.xlsx
 *.csv
+
+# File integrity checksums (locally generated)
+*.md5

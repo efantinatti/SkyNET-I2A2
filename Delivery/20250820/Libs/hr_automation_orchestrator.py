@@ -13,6 +13,7 @@ from .data_loading_service import FileLoadingService
 from .business_logic_service import DataProcessingService
 from .output_service import OutputGenerationService
 from .email_library import EmailNotifier
+from .file_integrity_service import FileIntegrityService
 
 
 class HRAutomationOrchestrator:
@@ -41,9 +42,13 @@ class HRAutomationOrchestrator:
         # Initialize services
         self._initialize_services(data_dir, output_dir)
         
+        # Initialize file integrity service
+        self.file_integrity_service = FileIntegrityService(data_dir)
+        
         print("🚀 SkyNET I2A2 HR Automation System Initialized")
         print(f"📁 Data Directory: {data_dir}")
         print(f"📁 Output Directory: {output_dir}")
+        print(f"🔒 File Integrity Monitoring: Enabled")
     
     def _initialize_services(self, data_dir: str, output_dir: str) -> None:
         """Initialize all required services."""
@@ -63,9 +68,12 @@ class HRAutomationOrchestrator:
         # Email notification service
         self.email_service = EmailNotifier()
     
-    def execute_full_automation(self) -> str:
+    def execute_full_automation(self, force_run: bool = False) -> str:
         """
         Execute the complete HR automation workflow.
+        
+        Args:
+            force_run: If True, skip file integrity check and run anyway
         
         Returns:
             Path to generated output file
@@ -77,6 +85,52 @@ class HRAutomationOrchestrator:
             print("=" * 60)
             print("🤖 STARTING HR AUTOMATION PROCESS")
             print("=" * 60)
+            
+            # File Integrity Check (unless forced)
+            if not force_run:
+                print("\n🔒 INTEGRITY CHECK: Checking for file changes...")
+                changes = self.file_integrity_service.check_file_changes()
+                
+                # Check if any files have changed or are new
+                if not changes['changed'] and not changes['new']:
+                    print("✅ No file changes detected. Automation not needed.")
+                    print("📊 File Status Summary:")
+                    print(f"   • Unchanged files: {len(changes['unchanged'])}")
+                    print(f"   • Missing files: {len(changes['missing'])}")
+                    
+                    if changes['missing']:
+                        print(f"⚠️ Warning: {len(changes['missing'])} expected files are missing:")
+                        for missing_file in changes['missing']:
+                            print(f"   - {missing_file}")
+                    
+                    print("\n💡 To force execution:")
+                    print("   Legacy interface:  python Desafio-4-RH.py --force")
+                    print("   Modern interface:  python hr_automation_main.py --force")
+                    return "No processing needed - files unchanged"
+                
+                # Files have changed, display summary
+                print("📈 File changes detected:")
+                if changes['new']:
+                    print(f"   • New files: {len(changes['new'])}")
+                    for filename in changes['new']:
+                        print(f"     - {filename}")
+                
+                if changes['changed']:
+                    print(f"   • Changed files: {len(changes['changed'])}")
+                    for filename in changes['changed']:
+                        print(f"     - {filename}")
+                
+                if changes['unchanged']:
+                    print(f"   • Unchanged files: {len(changes['unchanged'])}")
+                
+                if changes['missing']:
+                    print(f"   • Missing files: {len(changes['missing'])}")
+                    for filename in changes['missing']:
+                        print(f"     - {filename}")
+                
+                print("🔄 Proceeding with automation due to file changes...")
+            else:
+                print("⚡ FORCED RUN: Skipping file integrity check")
             
             # Step 1: Load and validate all data files
             print("\n📂 STEP 1: Loading and validating data files...")
@@ -96,8 +150,18 @@ class HRAutomationOrchestrator:
                 calculations, template, employee_data, april_admissions_data
             )
             
-            # Step 4: Send email notification
-            print("\n📧 STEP 4: Sending email notification...")
+            # Step 4: Update file checksums (if not forced run)
+            if not force_run:
+                print("\n🔒 STEP 4a: Updating file integrity checksums...")
+                changes = self.file_integrity_service.check_file_changes()
+                if self.file_integrity_service.update_checksums(changes):
+                    updated_count = len(changes['changed']) + len(changes['new'])
+                    print(f"✅ Updated checksums for {updated_count} files")
+                else:
+                    print("⚠️ Some checksum updates failed")
+            
+            # Step 5: Send email notification
+            print(f"\n📧 STEP {'5' if not force_run else '4b'}: Sending email notification...")
             self._send_completion_notification(output_file_path)
             
             print("\n" + "=" * 60)
@@ -147,8 +211,101 @@ class HRAutomationOrchestrator:
             'validation_rules': {
                 'max_vacation_days': self.config.validation_rules.max_vacation_days,
                 'required_fields_count': len(self.config.validation_rules.required_fields)
+            },
+            'file_integrity': {
+                'monitoring_enabled': True,
+                'change_summary': self.file_integrity_service.get_change_summary()
             }
         }
+    
+    def check_file_integrity(self) -> dict:
+        """
+        Check file integrity without running automation.
+        
+        Returns:
+            Dictionary with file change information
+        """
+        return self.file_integrity_service.check_file_changes()
+    
+    def initialize_file_monitoring(self) -> bool:
+        """
+        Initialize file monitoring for all import files.
+        
+        Returns:
+            True if initialization successful, False otherwise
+        """
+        print("🔒 Initializing file integrity monitoring...")
+        success = self.file_integrity_service.initialize_monitoring()
+        
+        if success:
+            print("✅ File monitoring initialized successfully")
+        else:
+            print("❌ File monitoring initialization failed")
+        
+        return success
+    
+    def force_checksum_update(self) -> bool:
+        """
+        Force update of all file checksums.
+        
+        Returns:
+            True if update successful, False otherwise
+        """
+        print("🔄 Forcing checksum update for all files...")
+        
+        # Get current file states
+        changes = self.file_integrity_service.check_file_changes()
+        
+        # Force update by treating all existing files as "changed"
+        all_files = {}
+        all_files.update(changes['changed'])
+        all_files.update(changes['new'])
+        all_files.update({f: 'updated' for f in changes['unchanged']})
+        
+        # Calculate fresh checksums for unchanged files
+        for filename in changes['unchanged']:
+            file_path = Path('Import') / filename
+            if file_path.exists():
+                try:
+                    md5_checksum = self.file_integrity_service.calculate_file_md5(file_path)
+                    all_files[filename] = md5_checksum
+                except Exception as e:
+                    print(f"⚠️ Error calculating checksum for {filename}: {e}")
+        
+        # Update all checksums
+        forced_changes = {
+            'changed': all_files,
+            'new': {},
+            'missing': changes['missing'],
+            'unchanged': []
+        }
+        
+        success = self.file_integrity_service.update_checksums(forced_changes)
+        
+        if success:
+            updated_count = len(all_files)
+            print(f"✅ Force updated checksums for {updated_count} files")
+        else:
+            print("❌ Some checksum updates failed")
+        
+        return success
+    
+    def clean_orphaned_checksums(self) -> int:
+        """
+        Clean orphaned checksum files.
+        
+        Returns:
+            Number of orphaned files removed
+        """
+        print("🧹 Cleaning orphaned checksum files...")
+        removed_count = self.file_integrity_service.clean_orphaned_md5_files()
+        
+        if removed_count > 0:
+            print(f"✅ Removed {removed_count} orphaned checksum files")
+        else:
+            print("✅ No orphaned checksum files found")
+        
+        return removed_count
     
     def validate_environment(self) -> bool:
         """
