@@ -48,9 +48,16 @@ class CSVOutputFormatter(OutputFormatter):
         output_data = self._build_output_data(calculations)
         output_df = pd.DataFrame(output_data)
         
-        # Ensure column order matches template
-        template_columns = template.data.columns.tolist()
-        output_df = output_df.reindex(columns=template_columns, fill_value='')
+        # Ensure column order matches template if template has columns
+        if template and hasattr(template, 'data') and not template.data.empty:
+            try:
+                template_columns = template.data.columns.tolist()
+                # Only reindex if template columns exist and are valid
+                if template_columns and all(isinstance(col, str) for col in template_columns):
+                    output_df = output_df.reindex(columns=template_columns, fill_value='')
+            except Exception as e:
+                print(f"⚠️ Warning: Could not match template columns: {e}")
+                # Continue with default column order
         
         return output_df
     
