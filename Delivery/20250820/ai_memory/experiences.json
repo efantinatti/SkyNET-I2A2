@@ -1,0 +1,119 @@
+[
+  {
+    "timestamp": "2025-09-06T12:31:00.479562",
+    "context_hash": "2a271a5f0acff22b1f901ab71a805d97",
+    "context": {
+      "employee_count": 1792,
+      "data_quality_score": 0.95,
+      "target_value": 1380178,
+      "budget_limit": 1500000,
+      "time_constraint": "normal",
+      "compliance_required": true,
+      "business_rules": {
+        "vacation_rules": true,
+        "termination_rules": true,
+        "admission_rules": true
+      },
+      "historical_data_available": false,
+      "flexible_parameters": true
+    },
+    "decision": {
+      "name": "conservative",
+      "description": "Aplicar regras padr\u00e3o com margem de seguran\u00e7a",
+      "parameters": {
+        "safety_margin": 0.1,
+        "rule_strictness": 1.0,
+        "adaptation_factor": 0.5
+      },
+      "expected_performance": 0.790683,
+      "confidence": 0.8156100000000001,
+      "reasoning": "Conservative approach ensures compliance and reduces risk.",
+      "risks": [
+        "missed_opportunities",
+        "suboptimal_performance"
+      ],
+      "benefits": [
+        "reliable",
+        "compliant",
+        "low_risk",
+        "favorable_environment"
+      ]
+    },
+    "outcome": {
+      "accuracy": 0.790683,
+      "total_value": 1380178.0,
+      "employee_count": 1792,
+      "processing_time": 91,
+      "cost": 1000.0,
+      "risk_level": "low"
+    },
+    "performance_score": 0.5862732,
+    "feedback": {
+      "performance": {
+        "accuracy": 0.98,
+        "efficiency": 0.92
+      },
+      "satisfaction": 0.85,
+      "cost_optimization": 0.78
+    },
+    "tags": [
+      "large_scale",
+      "low_accuracy"
+    ]
+  },
+  {
+    "timestamp": "2025-09-06T12:31:24.677233",
+    "context_hash": "a538c2e6f407af2e6a6db8c992c3b459",
+    "context": {
+      "employee_count": 1815,
+      "data_quality_score": 0.8,
+      "target_value": 1380178,
+      "budget_limit": 1500000,
+      "time_constraint": "normal",
+      "compliance_required": true,
+      "business_rules": {
+        "vacation_rules": true,
+        "termination_rules": true,
+        "admission_rules": true
+      },
+      "historical_data_available": true,
+      "flexible_parameters": true
+    },
+    "decision": {
+      "name": "conservative",
+      "description": "Aplicar regras padr\u00e3o com margem de seguran\u00e7a",
+      "parameters": {
+        "safety_margin": 0.1,
+        "rule_strictness": 1.0,
+        "adaptation_factor": 0.5
+      },
+      "expected_performance": 0.7749975,
+      "confidence": 0.8033250000000001,
+      "reasoning": "Conservative approach ensures compliance and reduces risk.",
+      "risks": [
+        "missed_opportunities",
+        "suboptimal_performance"
+      ],
+      "benefits": [
+        "reliable",
+        "compliant",
+        "low_risk",
+        "favorable_environment"
+      ]
+    },
+    "outcome": {
+      "accuracy": 0.7749975,
+      "total_value": 1380178.0,
+      "employee_count": 1815,
+      "processing_time": 91,
+      "cost": 1000.0,
+      "risk_level": "low"
+    },
+    "performance_score": 0.409999,
+    "feedback": null,
+    "tags": [
+      "large_scale",
+      "low_accuracy"
+    ]
+  }
+]

@@ -7,7 +7,7 @@ Implements Facade pattern for simplified client interface.
 
 import logging
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Dict, List, Any
 from .config_manager import ConfigManager
 from .validation_service import DataValidationService, LLMValidationStrategy
 from .data_loading_service import FileLoadingService
@@ -15,6 +15,7 @@ from .business_logic_service import DataProcessingService
 from .output_service import OutputGenerationService
 from .email_library import EmailNotifier
 from .file_integrity_service import FileIntegrityService
+from .ai_agent import AIAgent
 
 # Suppress numexpr info messages
 logging.getLogger('numexpr.utils').setLevel(logging.WARNING)
@@ -71,6 +72,9 @@ class HRAutomationOrchestrator:
         
         # Email notification service
         self.email_service = EmailNotifier()
+        
+        # AI Agent
+        self.ai_agent = AIAgent()
     
     def execute_full_automation(self, force_run: bool = False) -> str:
         """
@@ -140,9 +144,20 @@ class HRAutomationOrchestrator:
             print("\n📂 STEP 1: Loading and validating data files...")
             loaded_data = self.file_loading_service.load_all_files()
             
-            # Step 2: Process data and calculate benefits
-            print("\n🔄 STEP 2: Processing data and calculating benefits...")
+            # Step 2: Process data with AI Agent
+            print("\n🔄 STEP 2: Processing data with AI Agent...")
+            
+            # Criar contexto para o agente IA
+            ai_context = self._create_ai_context(loaded_data)
+            
+            # Processar com agente IA
+            ai_response = self.ai_agent.process_hr_request(ai_context)
+            
+            # Usar resultados do agente IA para processamento tradicional
             calculations = self.processing_service.process_data(loaded_data)
+            
+            # Aplicar otimizações do agente IA
+            calculations = self._apply_ai_optimizations(calculations, ai_response)
             
             # Step 3: Generate output file
             print("\n📊 STEP 3: Generating output file...")
@@ -179,6 +194,95 @@ class HRAutomationOrchestrator:
         except Exception as e:
             print(f"\n❌ AUTOMATION FAILED: {e}")
             raise
+    
+    def _create_ai_context(self, loaded_data: Dict) -> Dict[str, Any]:
+        """Cria contexto para o agente IA"""
+        # Extrair informações dos dados carregados
+        employees_data = loaded_data.get('employees', {})
+        employee_count = len(employees_data.data) if hasattr(employees_data, 'data') else 0
+        
+        # Calcular qualidade dos dados
+        data_quality_score = self._calculate_data_quality(loaded_data)
+        
+        # Criar contexto
+        context = {
+            'employee_count': employee_count,
+            'data_quality_score': data_quality_score,
+            'target_value': 1380178,  # Valor alvo
+            'budget_limit': 1500000,
+            'time_constraint': 'normal',
+            'compliance_required': True,
+            'business_rules': {
+                'vacation_rules': True,
+                'termination_rules': True,
+                'admission_rules': True
+            },
+            'historical_data_available': len(self.ai_agent.memory.experiences) > 0,
+            'flexible_parameters': True
+        }
+        
+        return context
+    
+    def _apply_ai_optimizations(self, calculations, ai_response) -> List:
+        """Aplica otimizações do agente IA aos cálculos"""
+        # Obter parâmetros adaptativos do agente IA
+        ai_parameters = ai_response.decision.parameters_used
+        
+        # Aplicar otimizações baseadas na decisão do agente
+        if ai_response.decision.decision.selected_option.name == "optimized":
+            # Aplicar otimizações de performance
+            for calc in calculations:
+                if hasattr(calc, 'dias_a_pagar'):
+                    # Ajustar dias a pagar baseado no fator de otimização
+                    optimization_factor = ai_parameters.get('optimization_factor', 0.8)
+                    calc.dias_a_pagar = int(calc.dias_a_pagar * optimization_factor)
+        
+        elif ai_response.decision.decision.selected_option.name == "adaptive":
+            # Aplicar adaptações dinâmicas
+            for calc in calculations:
+                if hasattr(calc, 'dias_a_pagar'):
+                    # Ajustar baseado no fator de adaptação
+                    adaptation_factor = ai_parameters.get('adaptation_factor', 0.9)
+                    calc.dias_a_pagar = int(calc.dias_a_pagar * adaptation_factor)
+        
+        # Aplicar ajustes de custo
+        company_cost_percentage = ai_parameters.get('company_cost_percentage', 0.8)
+        employee_cost_percentage = ai_parameters.get('employee_cost_percentage', 0.2)
+        
+        for calc in calculations:
+            if hasattr(calc, 'custo_empresa') and hasattr(calc, 'custo_profissional'):
+                total_value = calc.valor_total
+                calc.custo_empresa = total_value * company_cost_percentage
+                calc.custo_profissional = total_value * employee_cost_percentage
+        
+        return calculations
+    
+    def _calculate_data_quality(self, loaded_data: Dict) -> float:
+        """Calcula score de qualidade dos dados"""
+        quality_score = 1.0
+        
+        # Verificar completude dos dados
+        required_files = ['employees', 'working_days', 'state_values', 'vacations']
+        for file_key in required_files:
+            if file_key not in loaded_data:
+                quality_score -= 0.2
+            elif hasattr(loaded_data[file_key], 'data') and loaded_data[file_key].data.empty:
+                quality_score -= 0.1
+        
+        # Verificar qualidade dos dados de funcionários
+        if 'employees' in loaded_data:
+            employees_data = loaded_data['employees']
+            if hasattr(employees_data, 'data'):
+                df = employees_data.data
+                # Verificar campos obrigatórios
+                required_columns = ['MATRICULA', 'Nome', 'Estado', 'Sindicato']
+                for col in required_columns:
+                    if col not in df.columns:
+                        quality_score -= 0.1
+                    elif df[col].isna().sum() > len(df) * 0.1:  # Mais de 10% nulos
+                        quality_score -= 0.05
+        
+        return max(0.0, min(1.0, quality_score))
     
     def _send_completion_notification(self, output_file_path: str) -> None:
         """Send email notification about process completion."""

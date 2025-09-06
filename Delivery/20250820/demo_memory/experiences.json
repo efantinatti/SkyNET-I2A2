@@ -1,0 +1,27 @@
+[
+  {
+    "timestamp": "2025-09-06T12:31:00.507546",
+    "context_hash": "2cddb692dd863faa705e496f3f74c9e9",
+    "context": {
+      "employee_count": 1000,
+      "data_quality": 0.9
+    },
+    "decision": {
+      "strategy": "conservative",
+      "parameters": {
+        "safety_margin": 0.1
+      }
+    },
+    "outcome": {
+      "accuracy": 0.95,
+      "total_value": 1000000
+    },
+    "performance_score": 0.38,
+    "feedback": null,
+    "tags": [
+      "medium_scale",
+      "strategy_conservative",
+      "medium_accuracy"
+    ]
+  }
+]
