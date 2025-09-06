@@ -325,10 +325,13 @@ class AIAgent:
     def _execute_processing(self, context: Dict[str, Any], 
                           decision_result: DecisionResult) -> Dict[str, Any]:
         """Executa processamento baseado na decisão"""
+        # Calcular valor total baseado nos dados reais
+        base_total_value = context.get('calculated_value', 0)  # Usar valor calculado fornecido no contexto
+        
         # Simular processamento baseado na decisão
         processing_results = {
             'accuracy': decision_result.expected_outcome.get('expected_accuracy', 0.95),
-            'total_value': context.get('target_value', 1380178),
+            'total_value': base_total_value,
             'employee_count': context.get('employee_count', 1792),
             'processing_time': decision_result.expected_outcome.get('estimated_processing_time', 60),
             'cost': decision_result.expected_outcome.get('estimated_cost', 1000),
@@ -361,7 +364,7 @@ class AIAgent:
         
         constraints = {
             'max_processing_time': 300,
-            'budget_limit': context.get('budget_limit', 1500000),
+            'budget_limit': context.get('budget_limit'),  # Let budget limit be dynamic
             'compliance_required': True
         }
         
@@ -459,7 +462,7 @@ class AIAgent:
             },
             'constraints': {
                 'max_processing_time': 300,
-                'budget_limit': 1500000,
+                'budget_limit': None,  # Will be set dynamically
                 'compliance_required': True
             }
         }

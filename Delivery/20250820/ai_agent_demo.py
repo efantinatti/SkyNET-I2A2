@@ -40,8 +40,6 @@ def main():
     context = {
         'employee_count': 1792,
         'data_quality_score': 0.95,
-        'target_value': 1380178,
-        'budget_limit': 1500000,
         'time_constraint': 'normal',
         'compliance_required': True,
         'business_rules': {
@@ -55,7 +53,6 @@ def main():
     
     print(f"   Employee Count: {context['employee_count']}")
     print(f"   Data Quality: {context['data_quality_score']:.2%}")
-    print(f"   Target Value: R$ {context['target_value']:,}")
     
     # 4. Processar solicitação com agente IA
     print("\n4️⃣ Processing Request with AI Agent...")

@@ -274,7 +274,7 @@ agent = AIAgent()
 context = {
     'employee_count': 1792,
     'data_quality_score': 0.95,
-    'target_value': 1380178
+    'calculated_value': None  # Will be dynamically calculated
 }
 response = agent.process_hr_request(context)
 

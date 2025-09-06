@@ -278,11 +278,11 @@ class AIMemorySystem:
         
         # Score baseado no resultado
         if 'accuracy' in outcome:
-            score += outcome['accuracy'] * 0.4
+            score += outcome['accuracy'] * 0.5
         
-        if 'total_value' in outcome and 'target_value' in outcome:
-            accuracy = min(1.0, outcome['total_value'] / outcome['target_value'])
-            score += accuracy * 0.3
+        # Usar valor calculado como referência
+        if 'calculated_value' in outcome and outcome['calculated_value'] > 0:
+            score += 0.4  # Pontuação base por ter um valor calculado válido
         
         if 'employee_count' in outcome:
             # Bonus por processar muitos funcionários

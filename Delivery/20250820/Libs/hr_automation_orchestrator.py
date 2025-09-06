@@ -204,12 +204,15 @@ class HRAutomationOrchestrator:
         # Calcular qualidade dos dados
         data_quality_score = self._calculate_data_quality(loaded_data)
         
-        # Criar contexto
+        # Calcular valor total dos benefícios
+        benefit_calculations = self.processing_service.process_data(loaded_data)
+        total_value = sum(calc.valor_total for calc in benefit_calculations)
+
+        # Criar contexto com valores dinâmicos
         context = {
             'employee_count': employee_count,
             'data_quality_score': data_quality_score,
-            'target_value': 1380178,  # Valor alvo
-            'budget_limit': 1500000,
+            'calculated_value': total_value,  # Passar o valor calculado para o agente
             'time_constraint': 'normal',
             'compliance_required': True,
             'business_rules': {
