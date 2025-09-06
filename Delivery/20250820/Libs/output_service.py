@@ -48,6 +48,7 @@ class CSVOutputFormatter(OutputFormatter):
         output_data = self._build_output_data(calculations)
         output_df = pd.DataFrame(output_data)
         
+        
         # Ensure column order matches template if template has columns
         if template and hasattr(template, 'data') and not template.data.empty:
             try:
