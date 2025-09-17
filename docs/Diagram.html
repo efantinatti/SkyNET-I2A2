@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama de Arquitetura</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .mermaid svg {
+            margin: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex items-center justify-center min-h-screen p-4">
+    <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg w-full max-w-6xl">
+        <h1 class="text-2xl font-bold text-center mb-6">Diagrama de Arquitetura do Sistema de Automação de RH</h1>
+        <div class="mermaid">
+graph TB
+    subgraph "Interface de Usuário"
+        A[hr_automation_main.py<br/>Interface Moderna CLI] 
+        B[Desafio-4-RH.py<br/>Interface Legada]
+    end
+    
+    subgraph "Camada de Orquestração"
+        C[HRAutomationOrchestrator<br/>Padrão Facade]
+    end
+    
+    subgraph "Camada de Serviços"
+        D[ConfigManager<br/>Gerenciamento de Configuração]
+        E[FileIntegrityService<br/>Monitoramento MD5]
+        F[DataValidationService<br/>Validação com IA]
+        G[DataLoadingService<br/>Carregamento de Dados]
+        H[BusinessLogicService<br/>Regras de Negócio]
+        I[OutputService<br/>Geração de Relatórios]
+        J[EmailNotifier<br/>Notificações por Email]
+    end
+    
+    subgraph "Agentes Inteligentes"
+        K[LLMValidationStrategy<br/>Google Gemini AI]
+        L[Validation Rules<br/>Regras Configuráveis]
+    end
+    
+    subgraph "Camada de Dados"
+        M[Import/<br/>11 Arquivos Excel]
+        N[Config/<br/>config.ini]
+        O[md5/<br/>Checksums MD5]
+        P[Output/<br/>Relatórios CSV]
+    end
+    
+    A --> C
+    B --> C
+    C --> D
+    C --> E
+    C --> F
+    C --> G
+    C --> H
+    C --> I
+    C --> J
+    
+    F --> K
+    F --> L
+    K --> |Google Gemini API| Q[API Gemini]
+    
+    D --> N
+    E --> O
+    G --> M
+    I --> P
+    J --> |SMTP| R[Servidor Email]
+    
+    style K fill:#ff9999
+    style L fill:#ff9999
+    style Q fill:#ffcccc
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+    </script>
+</body>
+</html>
