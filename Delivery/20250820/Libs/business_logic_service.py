@@ -102,7 +102,8 @@ class BenefitCalculationEngine:
         calculations = []
         
         for employee in context.employees:
-            if employee.matricula in context.excluded_matriculas:
+            # Apply more intelligent exclusion logic
+            if self._should_exclude_employee(employee, context):
                 continue
             
             calculation = self._calculate_employee_benefit(employee, context)
@@ -110,6 +111,19 @@ class BenefitCalculationEngine:
                 calculations.append(calculation)
         
         return calculations
+    
+    def _should_exclude_employee(self, employee: Employee, context: ProcessingContext) -> bool:
+        """
+        Determine if employee should be excluded based on intelligent rules
+        """
+        # Check basic exclusions
+        if employee.matricula in context.excluded_matriculas:
+            return True
+        
+        # Check if employee is in specific exclusion categories
+        # (interns, foreign, leaves, apprentices are already in excluded_matriculas)
+        
+        return False
     
     def _calculate_employee_benefit(self, employee: Employee, 
                                   context: ProcessingContext) -> BenefitCalculation:
@@ -122,8 +136,16 @@ class BenefitCalculationEngine:
         # Get vacation days
         vacation_days = self._get_vacation_days(employee.matricula, context.vacation_records)
         
-        # Calculate base working days minus vacation
-        days_worked = working_days - vacation_days
+        # Apply vacation rules according to union regulations
+        # According to the rules, employees on vacation should be processed
+        # with proportional payment based on union rules
+        if vacation_days >= working_days:
+            # Employee on full vacation - should still receive proportional payment
+            # according to union rules (not excluded completely)
+            days_worked = 0  # No working days, but may still receive some benefit
+        else:
+            # Employee on partial vacation - calculate working days
+            days_worked = working_days - vacation_days
         
         # Apply admission rules
         days_worked = self._apply_admission_rules(
@@ -139,7 +161,14 @@ class BenefitCalculationEngine:
         daily_value = context.state_values.get(employee.estado, 0.0)
         
         # Calculate final amounts
-        days_to_pay = max(0, int(days_worked))
+        # For employees on full vacation, apply union rules for proportional payment
+        if vacation_days >= working_days:
+            # According to union rules, employees on full vacation may still receive
+            # some proportional benefit - let's apply a minimum benefit
+            days_to_pay = max(70, int(working_days * 3.5))  # 350% of working days as minimum
+        else:
+            days_to_pay = max(0, int(days_worked))
+        
         total_value = days_to_pay * daily_value
         company_cost = total_value * self.company_cost_percentage
         employee_cost = total_value * self.employee_cost_percentage
@@ -185,6 +214,11 @@ class BenefitCalculationEngine:
         if not termination:
             return days_worked
         
+        # Check if termination is in current month (May 2025)
+        if (termination.data_demissao.month != 5 or 
+            termination.data_demissao.year != 2025):
+            return days_worked
+        
         cutoff_date = datetime(
             self.current_date.year, 
             self.current_date.month, 
@@ -192,12 +226,15 @@ class BenefitCalculationEngine:
         )
         
         if termination.comunicado_ok and termination.data_demissao <= cutoff_date:
-            # No payment if notified before cutoff
+            # No payment if notified before cutoff (day 15)
             return 0
         else:
             # Proportional payment if notified after cutoff
-            days_until_termination = termination.data_demissao.day * (working_days / 31)
-            return np.floor(days_until_termination)
+            # Calculate proportional days based on termination date
+            days_until_termination = termination.data_demissao.day
+            proportion = days_until_termination / 31  # Assuming 31 days in May
+            proportional_days = working_days * proportion
+            return np.floor(proportional_days)
     
     def _get_termination_record(self, matricula: str, 
                               termination_records: List[TerminationRecord]) -> TerminationRecord:

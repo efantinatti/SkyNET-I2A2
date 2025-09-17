@@ -48,9 +48,17 @@ class CSVOutputFormatter(OutputFormatter):
         output_data = self._build_output_data(calculations)
         output_df = pd.DataFrame(output_data)
         
-        # Ensure column order matches template
-        template_columns = template.data.columns.tolist()
-        output_df = output_df.reindex(columns=template_columns, fill_value='')
+        
+        # Ensure column order matches template if template has columns
+        if template and hasattr(template, 'data') and not template.data.empty:
+            try:
+                template_columns = template.data.columns.tolist()
+                # Only reindex if template columns exist and are valid
+                if template_columns and all(isinstance(col, str) for col in template_columns):
+                    output_df = output_df.reindex(columns=template_columns, fill_value='')
+            except Exception as e:
+                print(f"⚠️ Warning: Could not match template columns: {e}")
+                # Continue with default column order
         
         return output_df
     
@@ -131,6 +139,64 @@ class CSVOutputWriter(OutputWriter):
             return False
 
 
+class ExcelOutputWriter(OutputWriter):
+    """
+    Excel file writer with proper formatting for Brazilian locale.
+    
+    Handles Excel-specific formatting requirements.
+    """
+    
+    def write(self, data: pd.DataFrame, file_path: str) -> bool:
+        """
+        Write DataFrame to Excel file with Brazilian formatting.
+        
+        Args:
+            data: DataFrame to write
+            file_path: Output file path
+            
+        Returns:
+            True if successful, False otherwise
+        """
+        try:
+            # Ensure output directory exists
+            output_path = Path(file_path)
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            
+            # Write to Excel with proper formatting
+            with pd.ExcelWriter(file_path, engine='openpyxl') as writer:
+                data.to_excel(
+                    writer,
+                    sheet_name='VR_MENSAL_05_2025',
+                    index=False,
+                    startrow=0
+                )
+                
+                # Get the workbook and worksheet
+                workbook = writer.book
+                worksheet = writer.sheets['VR_MENSAL_05_2025']
+                
+                # Format columns for better readability
+                for column in worksheet.columns:
+                    max_length = 0
+                    column_letter = column[0].column_letter
+                    
+                    for cell in column:
+                        try:
+                            if len(str(cell.value)) > max_length:
+                                max_length = len(str(cell.value))
+                        except:
+                            pass
+                    
+                    adjusted_width = min(max_length + 2, 50)
+                    worksheet.column_dimensions[column_letter].width = adjusted_width
+            
+            return True
+            
+        except Exception as e:
+            print(f"❌ Failed to write Excel output file: {e}")
+            return False
+
+
 class OutputGenerationService:
     """
     Service for generating output files from benefit calculations.
@@ -141,7 +207,7 @@ class OutputGenerationService:
     def __init__(self, output_dir: str = 'Output'):
         self.output_dir = Path(output_dir)
         self.formatter = CSVOutputFormatter()
-        self.writer = CSVOutputWriter()
+        self.writer = ExcelOutputWriter()  # Changed to Excel writer
     
     def generate_output(self, calculations: List[BenefitCalculation],
                        template: DataFrameWrapper,
@@ -228,5 +294,5 @@ class OutputGenerationService:
         return output_df
     
     def _generate_filename(self) -> str:
-        """Generate output filename with timestamp."""
-        return 'VR_MENSAL_05_2025_FINAL.csv'
+        """Generate output filename with correct name."""
+        return 'VR MENSAL 05.2025.xlsx'
