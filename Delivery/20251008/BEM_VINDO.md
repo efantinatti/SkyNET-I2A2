@@ -174,9 +174,9 @@ Consulte a seção de troubleshooting no [GUIA_RAPIDO.md](GUIA_RAPIDO.md#-soluç
 
 ---
 
-## 🎓 Sobre o Projeto SkyNET-I2A2
+## 🎓 Sobre o I2A2 Project
 
-Esta aplicação faz parte do seu projeto **SkyNET-I2A2** (Delivery/Fantinatti):
+Esta aplicação faz parte do **I2A2 Project**:
 
 - **Repositório:** https://github.com/efantinatti/SkyNET-I2A2/tree/main/Delivery/Fantinatti
 - **Projeto:** I2A2 - Inteligência Artificial Aplicada

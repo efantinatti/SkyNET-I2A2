@@ -4,7 +4,7 @@
 
 ### ✨ Versão Inicial
 
-Esta é a primeira versão do InsightAgent EDA desenvolvida por **Ernani Fantinatti** como parte do projeto **SkyNET-I2A2**.
+Esta é a primeira versão do InsightAgent EDA desenvolvida por **Ernani Fantinatti** como parte do **I2A2 Project**.
 
 #### 🎯 Adicionado
 - ✅ Nome "Ernani Fantinatti" no título da aplicação
@@ -14,7 +14,7 @@ Esta é a primeira versão do InsightAgent EDA desenvolvida por **Ernani Fantina
 - ✅ Arquivo `GUIA_RAPIDO.md` para início rápido
 - ✅ Arquivo `config/fantinatti_config.py` com configurações personalizadas
 - ✅ Arquivo `VERSAO.md` (este arquivo) para rastreamento de mudanças
-- ✅ Links para o repositório SkyNET-I2A2
+- ✅ Links para o repositório do projeto
 - ✅ Informações de contato atualizadas
 
 #### 🔧 Modificado
@@ -128,7 +128,7 @@ SkyNET-I2A2/
 ### Desenvolvedor
 - **Nome:** Ernani Fantinatti
 - **GitHub:** [@efantinatti](https://github.com/efantinatti)
-- **Projeto:** SkyNET-I2A2
+- **Projeto:** I2A2 Project
 
 ### Documentação
 - [README Principal](README.md)

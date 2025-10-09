@@ -84,10 +84,10 @@ Agradecimento especial à comunidade Python e à comunidade de IA:
 
 ## 🎓 Projeto Acadêmico
 
-### SkyNET-I2A2
+### I2A2 Project
 **Inteligência Artificial Aplicada**
 
-Este projeto foi desenvolvido como parte do programa I2A2, focado em:
+Este projeto foi desenvolvido como parte do I2A2 Project, focado em:
 - Aplicação prática de IA
 - Desenvolvimento de sistemas inteligentes
 - Análise automatizada de dados

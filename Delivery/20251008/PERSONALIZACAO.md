@@ -2,7 +2,7 @@
 
 ## 🎯 Sobre Esta Versão
 
-Esta é uma versão personalizada do **InsightAgent EDA** desenvolvida por **Ernani Fantinatti** como parte do projeto **SkyNET-I2A2**.
+Esta é uma versão do **InsightAgent EDA** desenvolvida por **Ernani Fantinatti** como parte do **I2A2 Project**.
 
 ### 📝 Informações do Desenvolvedor
 
@@ -22,7 +22,7 @@ Esta é uma versão personalizada do **InsightAgent EDA** desenvolvida por **Ern
 
 ### 2. **Documentação**
 - ✅ README.md atualizado com créditos ao Ernani
-- ✅ Link para o repositório SkyNET-I2A2 adicionado
+- ✅ Link para o repositório do projeto adicionado
 - ✅ Informações de contato incluídas
 
 ### 3. **Código Fonte**
