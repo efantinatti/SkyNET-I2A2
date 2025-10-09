@@ -145,11 +145,7 @@ Esta versão inclui as mesmas capacidades de análise:
 
 ## 🤝 Suporte e Contato
 
-### **Desenvolvedor Original**
-- Fábio Rhein
-- [Repositório Original](https://github.com/fabiorhein/rhein-ai-agent-challenge)
-
-### **Versão Personalizada**
+### **Desenvolvedor**
 - **Ernani Fantinatti**
 - 📧 Email: [Entre em contato via GitHub](https://github.com/efantinatti)
 - 💼 LinkedIn: [Adicione seu LinkedIn aqui]
@@ -171,10 +167,10 @@ Este projeto mantém a licença MIT original. Veja o arquivo `LICENSE` para deta
 
 ## 🙏 Agradecimentos
 
-- **Fábio Rhein** - Desenvolvedor do projeto original
 - **Google Gemini** - API de Inteligência Artificial
 - **Streamlit** - Framework de desenvolvimento
 - **Projeto I2A2** - Oportunidade de desenvolvimento
+- **Comunidade Open Source** - Bibliotecas e ferramentas
 
 ---
 

@@ -90,7 +90,7 @@ A aplicação utiliza **5 agentes especializados** que trabalham em conjunto:
 
 ```bash
 # 1. Clone o repositório
-cd rhein-ai-agent-challenge
+cd SkyNET-I2A2/tree/main/Delivery/20251008/
 
 # 2. Crie um ambiente virtual
 python -m venv .venv
@@ -292,7 +292,7 @@ CREATE INDEX idx_generated_codes_session_id ON generated_codes(session_id);
 ## 🛠️ Estrutura do Projeto
 
 ```
-rhein-ai-agent-challenge/
+SkyNET-I2A2/
 ├── agents/              # Agentes especializados de IA
 │   ├── coordinator.py   # Decide qual agente usar
 │   ├── data_analyst.py  # Análises estatísticas

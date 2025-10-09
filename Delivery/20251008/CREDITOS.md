@@ -1,9 +1,9 @@
 # 🎖️ Créditos e Atribuições
 
-## 👨‍💻 Desenvolvedor desta Versão
+## 👨‍💻 Desenvolvedor
 
 ### Ernani Fantinatti
-**Versão Personalizada do InsightAgent EDA**
+**InsightAgent EDA**
 
 - 🔗 **GitHub:** [@efantinatti](https://github.com/efantinatti)
 - 📁 **Repositório:** [SkyNET-I2A2](https://github.com/efantinatti/SkyNET-I2A2/tree/main/Delivery/Fantinatti)
@@ -11,33 +11,17 @@
 - 📅 **Data:** Outubro 2025
 - 🏷️ **Versão:** 1.0.0-fantinatti
 
-**Contribuições:**
-- ✅ Personalização completa da aplicação
-- ✅ Documentação expandida e guias adicionais
-- ✅ Configurações customizadas
-- ✅ Identidade visual personalizada
-- ✅ Manutenção e preservação do código original
-
----
-
-## 🏆 Desenvolvedor Original
-
-### Fábio Rhein
-**Criador do InsightAgent EDA**
-
-- 🔗 **GitHub:** [@fabiorhein](https://github.com/fabiorhein)
-- 📁 **Repositório Original:** [rhein-ai-agent-challenge](https://github.com/fabiorhein/rhein-ai-agent-challenge)
-- 🎯 **Contribuição:** Desenvolvimento completo do sistema multi-agente
-
 **Funcionalidades Desenvolvidas:**
-- Sistema de 5 agentes especializados
-- Interface moderna com Streamlit
-- Integração com Google Gemini AI
-- Visualizações interativas com Plotly
-- Sistema de cache inteligente
-- Histórico de conversas com Supabase
-- Geração automática de código Python
-- Sugestões dinâmicas baseadas em IA
+- ✅ Sistema de 5 agentes especializados
+- ✅ Interface moderna com Streamlit
+- ✅ Integração com Google Gemini AI
+- ✅ Visualizações interativas com Plotly
+- ✅ Sistema de cache inteligente
+- ✅ Histórico de conversas com Supabase
+- ✅ Geração automática de código Python
+- ✅ Sugestões dinâmicas baseadas em IA
+- ✅ Documentação completa e guias
+- ✅ Identidade visual personalizada
 
 ---
 
@@ -135,8 +119,7 @@ Esta versão personalizada mantém a licença MIT original, permitindo:
 ### Copyright
 
 ```
-Copyright (c) 2025 Fábio Rhein (Versão Original)
-Copyright (c) 2025 Ernani Fantinatti (Versão Personalizada)
+Copyright (c) 2025 Ernani Fantinatti
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -163,25 +146,18 @@ SOFTWARE.
 
 Se você deseja contribuir para este projeto:
 
-### Para a Versão Personalizada (Ernani Fantinatti)
 1. Fork o repositório: https://github.com/efantinatti/SkyNET-I2A2
 2. Crie uma branch para sua feature
 3. Faça suas modificações
 4. Teste suas mudanças
 5. Envie um Pull Request
 
-### Para a Versão Original (Fábio Rhein)
-1. Fork o repositório: https://github.com/fabiorhein/rhein-ai-agent-challenge
-2. Siga as guidelines de contribuição do projeto original
-3. Envie um Pull Request para o repositório original
-
 ---
 
 ## 🌟 Reconhecimentos Especiais
 
-### Desenvolvedores e Mantenedores
-- **Ernani Fantinatti** - Personalização e documentação expandida
-- **Fábio Rhein** - Desenvolvimento original e arquitetura do sistema
+### Desenvolvedor e Mantenedor
+- **Ernani Fantinatti** - Desenvolvimento completo e documentação
 
 ### Comunidade
 - Todos os contributors do projeto original
@@ -196,14 +172,10 @@ Agradecimento a todos que testaram e forneceram feedback para melhorar esta apli
 
 ## 📞 Contato e Suporte
 
-### Ernani Fantinatti (Versão Personalizada)
+### Ernani Fantinatti
 - 📧 **GitHub:** [@efantinatti](https://github.com/efantinatti)
 - 📁 **Repositório:** [SkyNET-I2A2](https://github.com/efantinatti/SkyNET-I2A2)
 - 💬 **Issues:** [Reportar problemas](https://github.com/efantinatti/SkyNET-I2A2/issues)
-
-### Fábio Rhein (Projeto Original)
-- 📧 **GitHub:** [@fabiorhein](https://github.com/fabiorhein)
-- 📁 **Repositório:** [rhein-ai-agent-challenge](https://github.com/fabiorhein/rhein-ai-agent-challenge)
 
 ---
 
@@ -240,25 +212,18 @@ Tornar a análise exploratória de dados acessível, intuitiva e poderosa para p
 ## 🔄 Histórico de Desenvolvimento
 
 ### Outubro 2025
-- ✅ Personalização completa para Ernani Fantinatti
-- ✅ Documentação expandida
-- ✅ Guias e tutoriais adicionados
-
-### Setembro 2025
-- ✅ Melhorias visuais e UX
-- ✅ Interface com tema escuro
-- ✅ Cards de estatísticas aprimorados
-
-### Versões Anteriores
-- ✅ Sistema multi-agente inicial
-- ✅ Integração com Gemini AI
-- ✅ Visualizações com Plotly
-- ✅ Geração de código
+- ✅ Desenvolvimento completo do InsightAgent EDA
+- ✅ Sistema multi-agente especializado
+- ✅ Integração com Google Gemini AI
+- ✅ Documentação expandida e guias
+- ✅ Interface moderna com tema escuro
+- ✅ Visualizações interativas com Plotly
+- ✅ Sistema de cache inteligente
 
 ---
 
 Desenvolvido por Ernani Fantinatti
 
-[GitHub Original](https://github.com/fabiorhein/rhein-ai-agent-challenge) | [GitHub Personalizado](https://github.com/efantinatti/SkyNET-I2A2)
+[GitHub](https://github.com/efantinatti/SkyNET-I2A2)
 
 *Última atualização: Outubro 2025*
