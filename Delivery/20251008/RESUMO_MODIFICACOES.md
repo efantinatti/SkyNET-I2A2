@@ -14,7 +14,7 @@ A aplicação **InsightAgent EDA** foi **completamente personalizada** para **Er
 **Alterações:**
 - ✅ Adicionado nome "Ernani Fantinatti" na introdução
 - ✅ Criada seção "Sobre Esta Versão" com informações do desenvolvedor
-- ✅ Adicionados links para o repositório SkyNET-I2A2
+- ✅ Adicionados links para o repositório do projeto
 - ✅ Links para documentação adicional
 - ✅ Footer atualizado com créditos ao Ernani
 
@@ -281,7 +281,7 @@ Use o **[RESUMO_EXECUTIVO.md](RESUMO_EXECUTIVO.md)** para apresentar o projeto.
 
 ### Desenvolvedor
 - **Nome:** Ernani Fantinatti
-- **Projeto:** SkyNET-I2A2
+- **Projeto:** I2A2 Project
 - **Subprojeto:** Delivery/Fantinatti
 - **Versão:** 1.0.0-fantinatti
 - **Data:** Outubro 2025

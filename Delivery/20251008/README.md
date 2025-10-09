@@ -14,12 +14,12 @@ Uma aplicação inteligente desenvolvida por **Ernani Fantinatti** que permite f
 
 ## 👨‍💻 Sobre Esta Versão
 
-Esta é uma versão personalizada do InsightAgent EDA desenvolvida por **Ernani Fantinatti** como parte do projeto **SkyNET-I2A2**.
+Esta é uma versão do InsightAgent EDA desenvolvida por **Ernani Fantinatti** como parte do **I2A2 Project**.
 
 - **Desenvolvedor:** Ernani Fantinatti
 - **GitHub:** [@efantinatti](https://github.com/efantinatti)
 - **Repositório:** [SkyNET-I2A2/Delivery/Fantinatti](https://github.com/efantinatti/SkyNET-I2A2/tree/main/Delivery/Fantinatti)
-- **Projeto:** I2A2 - Inteligência Artificial Aplicada
+- **Projeto:** I2A2 Project - Inteligência Artificial Aplicada
 - **Versão:** 1.0.0-fantinatti
 
 ---
@@ -210,41 +210,45 @@ Se você não tem dados próprios, pode usar estes datasets públicos:
 
 Use o script abaixo para criar as tabelas no seu projeto Supabase. Você pode executar no SQL Editor do Supabase.
 
+**📌 URL do Projeto Supabase:** `https://qrfzfwnbktskjdzuqpuk.supabase.co`
+
+### Script SQL para Criar as Tabelas:
+
 ```sql
 -- Habilita a extensão para usar UUIDs
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 -- Tabela de sessões de análise
-CREATE TABLE sessions (
+CREATE TABLE IF NOT EXISTS sessions (
   id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
   created_at TIMESTAMPTZ DEFAULT NOW(),
   dataset_name TEXT,
   dataset_hash TEXT,
-  user_id TEXT -- Pode ser um identificador de sessão do Streamlit
+  user_id TEXT
 );
 
 -- Tabela de conversas (perguntas e respostas)
-CREATE TABLE conversations (
+CREATE TABLE IF NOT EXISTS conversations (
   id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
   session_id UUID REFERENCES sessions(id) ON DELETE CASCADE,
   question TEXT NOT NULL,
   answer TEXT,
-  chart_json JSONB, -- Para armazenar a especificação do gráfico Plotly
+  chart_json JSONB,
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
 -- Tabela de análises estatísticas detalhadas
-CREATE TABLE analyses (
+CREATE TABLE IF NOT EXISTS analyses (
   id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
   session_id UUID REFERENCES sessions(id) ON DELETE CASCADE,
-  conversation_id UUID REFERENCES conversations(id) ON DELETE SET NULL, -- Análise pode ser associada a uma conversa
-  analysis_type TEXT NOT NULL, -- Ex: 'descriptive_stats', 'correlation_matrix'
+  conversation_id UUID REFERENCES conversations(id) ON DELETE SET NULL,
+  analysis_type TEXT NOT NULL,
   results JSONB NOT NULL,
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
 -- Tabela de conclusões e insights gerados
-CREATE TABLE conclusions (
+CREATE TABLE IF NOT EXISTS conclusions (
   id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
   session_id UUID REFERENCES sessions(id) ON DELETE CASCADE,
   conversation_id UUID REFERENCES conversations(id) ON DELETE SET NULL,
@@ -254,21 +258,50 @@ CREATE TABLE conclusions (
 );
 
 -- Tabela de códigos gerados
-CREATE TABLE generated_codes (
+CREATE TABLE IF NOT EXISTS generated_codes (
   id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
   session_id UUID REFERENCES sessions(id) ON DELETE CASCADE,
   conversation_id UUID REFERENCES conversations(id) ON DELETE CASCADE,
-  code_type TEXT NOT NULL, -- 'analysis', 'visualization', 'complete', 'notebook'
+  code_type TEXT NOT NULL,
   python_code TEXT NOT NULL,
   description TEXT,
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
 -- Adiciona índices para otimizar consultas
-CREATE INDEX idx_conversations_session_id ON conversations(session_id);
-CREATE INDEX idx_analyses_session_id ON analyses(session_id);
-CREATE INDEX idx_conclusions_session_id ON conclusions(session_id);
-CREATE INDEX idx_generated_codes_session_id ON generated_codes(session_id);
+CREATE INDEX IF NOT EXISTS idx_conversations_session_id ON conversations(session_id);
+CREATE INDEX IF NOT EXISTS idx_analyses_session_id ON analyses(session_id);
+CREATE INDEX IF NOT EXISTS idx_conclusions_session_id ON conclusions(session_id);
+CREATE INDEX IF NOT EXISTS idx_generated_codes_session_id ON generated_codes(session_id);
+```
+
+### 📝 Instruções para Executar o Script:
+
+1. Acesse o [Supabase Dashboard](https://supabase.com/dashboard)
+2. Selecione seu projeto
+3. No menu lateral, clique em **"SQL Editor"**
+4. Clique em **"New query"**
+5. Cole o script SQL acima
+6. Clique em **"Run"** ou pressione `Ctrl+Enter`
+7. ✅ Você deve ver "Success. No rows returned"
+
+### ✅ Verificar se as Tabelas foram Criadas:
+
+Execute este comando para verificar:
+
+```sql
+SELECT table_name 
+FROM information_schema.tables 
+WHERE table_schema = 'public' 
+ORDER BY table_name;
+```
+
+Você deve ver as seguintes tabelas:
+- `analyses`
+- `conclusions`
+- `conversations`
+- `generated_codes`
+- `sessions`
 ```
 
 ## 🎨 Funcionalidades Avançadas
@@ -529,6 +562,6 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para detalhes.
 
 ---
 
-Desenvolvido por Ernani Fantinatti
+Desenvolvido por Ernani Fantinatti para o **I2A2 Project**
 
 [GitHub: @efantinatti](https://github.com/efantinatti) | [Repositório SkyNET-I2A2](https://github.com/efantinatti/SkyNET-I2A2/tree/main/Delivery/Fantinatti)
