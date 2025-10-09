@@ -1,0 +1,155 @@
+/* Estilos gerais */
+:root {
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --secondary: #6b7280;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --light: #f9fafb;
+    --dark: #111827;
+    --border-radius: 0.5rem;
+    --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Estilo para mensagens do chat */
+.stChatMessage {
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    box-shadow: var(--box-shadow);
+    border-left: 4px solid var(--primary);
+}
+
+/* Estilo para mensagens do usuário */
+.stChatMessage[data-testid="stChatMessage"][data-message-author-role="user"] {
+    background-color: #f0f9ff;
+    border-left-color: var(--primary);
+}
+
+/* Estilo para mensagens do assistente */
+.stChatMessage[data-testid="stChatMessage"][data-message-author-role="assistant"] {
+    background-color: #f8fafc;
+    border-left-color: var(--success);
+}
+
+/* Estilo para cards de estatísticas */
+.stats-card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 1.25rem;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1rem;
+    border-top: 3px solid var(--primary);
+}
+
+.stats-card h3 {
+    color: var(--primary);
+    margin-top: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.stats-card p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0.5rem 0 0;
+}
+
+/* Estilo para botões */
+.stButton>button {
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.stButton>button.primary-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+}
+
+.stButton>button.primary-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+/* Estilo para a sidebar */
+.css-1d391kg, .css-1y4p8pa {
+    background-color: #f8fafc;
+    border-right: 1px solid #e2e8f0;
+}
+
+/* Estilo para o input de chat */
+.stTextInput>div>div>input {
+    border-radius: var(--border-radius);
+    border: 1px solid #e2e8f0;
+    padding: 0.75rem 1rem;
+}
+
+/* Estilo para abas */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 0.5rem;
+}
+
+.stTabs [data-baseweb="tab"] {
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Estilo para tooltips */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: var(--dark);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.stChatMessage {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .stats-card {
+        margin-bottom: 0.75rem;
+    }
+    
+    .stChatMessage {
+        padding: 0.75rem;
+    }
+}
