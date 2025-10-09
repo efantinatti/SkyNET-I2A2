@@ -1,10 +1,10 @@
-# 📝 Histórico de Versões - InsightAgent EDA (Ernani Fantinatti)
+# 📝 Histórico de Versões - InsightAgent EDA
 
 ## [1.0.0-fantinatti] - Outubro 2025
 
-### ✨ Personalização Completa para Ernani Fantinatti
+### ✨ Versão Inicial
 
-Esta é a primeira versão personalizada do InsightAgent EDA para **Ernani Fantinatti** como parte do projeto **SkyNET-I2A2**.
+Esta é a primeira versão do InsightAgent EDA desenvolvida por **Ernani Fantinatti** como parte do projeto **SkyNET-I2A2**.
 
 #### 🎯 Adicionado
 - ✅ Nome "Ernani Fantinatti" no título da aplicação
@@ -53,35 +53,7 @@ Nenhuma mudança na stack tecnológica:
 - Pandas
 - Supabase (opcional)
 
----
 
-## [1.0.0] - Setembro 2025 (Versão Original)
-
-### Desenvolvedor Original: Fábio Rhein
-
-#### Recursos Principais
-- Sistema multi-agente com 5 agentes especializados
-- Análise exploratória de dados automatizada
-- Visualizações interativas com Plotly
-- Geração de código Python
-- Histórico de conversas
-- Interface responsiva e moderna
-- Tema escuro otimizado
-
-#### Agentes Implementados
-1. **CoordinatorAgent** - Roteamento inteligente
-2. **DataAnalystAgent** - Análises estatísticas
-3. **VisualizationAgent** - Gráficos interativos
-4. **ConsultantAgent** - Insights de negócio
-5. **CodeGeneratorAgent** - Geração de código
-
-#### Melhorias de Interface
-- Design moderno com tema escuro
-- Cards de estatísticas aprimorados
-- Layout responsivo
-- Navegação por abas
-- Feedback visual melhorado
-- Tabelas roláveis para grandes datasets
 
 ---
 
@@ -133,7 +105,7 @@ Nenhuma mudança na stack tecnológica:
 
 ### Arquivos do Projeto
 ```
-rhein-ai-agent-challenge/
+SkyNET-I2A2/
 ├── agents/ (5 agentes)
 ├── components/ (3 componentes)
 ├── config/ (2 configs + fantinatti_config.py)
@@ -141,18 +113,17 @@ rhein-ai-agent-challenge/
 ├── assets/ (1 arquivo CSS)
 ├── app.py (arquivo principal)
 ├── README.md (documentação principal)
-├── PERSONALIZACAO.md (novo)
-├── GUIA_RAPIDO.md (novo)
-└── VERSAO.md (novo)
+├── PERSONALIZACAO.md
+├── GUIA_RAPIDO.md
+└── VERSAO.md
 ```
 
 ---
 
 ## 🔗 Links e Referências
 
-### Repositórios
-- **Original:** [fabiorhein/rhein-ai-agent-challenge](https://github.com/fabiorhein/rhein-ai-agent-challenge)
-- **Personalizado:** [efantinatti/SkyNET-I2A2](https://github.com/efantinatti/SkyNET-I2A2/tree/main/Delivery/Fantinatti)
+### Repositório
+- **GitHub:** [efantinatti/SkyNET-I2A2](https://github.com/efantinatti/SkyNET-I2A2/tree/main/Delivery/Fantinatti)
 
 ### Desenvolvedor
 - **Nome:** Ernani Fantinatti
@@ -186,10 +157,10 @@ Exemplo: 1.0.0-fantinatti
 
 ## 🎉 Agradecimentos
 
-- **Fábio Rhein** - Desenvolvedor do projeto original InsightAgent EDA
 - **Google** - API Gemini para inteligência artificial
 - **Streamlit** - Framework de desenvolvimento
 - **Projeto I2A2** - Oportunidade de aprendizado e desenvolvimento
+- **Comunidade Open Source** - Bibliotecas e ferramentas utilizadas
 
 ---
 

@@ -252,7 +252,6 @@ DEEP DIVE
 ### Repositórios
 - [GitHub - Ernani Fantinatti](https://github.com/efantinatti)
 - [SkyNET-I2A2](https://github.com/efantinatti/SkyNET-I2A2)
-- [Projeto Original](https://github.com/fabiorhein/rhein-ai-agent-challenge)
 
 ### Datasets de Exemplo
 - [Titanic Dataset](https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv)

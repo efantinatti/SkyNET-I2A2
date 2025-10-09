@@ -6,7 +6,7 @@
 
 ```bash
 # Clone ou navegue até a pasta do projeto
-cd /caminho/para/rhein-ai-agent-challenge
+cd /caminho/para/SkyNET-I2A2/Delivery/20251008
 
 # Crie o ambiente virtual
 python -m venv .venv

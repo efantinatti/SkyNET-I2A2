@@ -39,7 +39,7 @@ Criei o arquivo `config/fantinatti_config.py` com suas informações centralizad
 
 1. **Instale as dependências:**
    ```bash
-   cd /Users/efantinatti/Downloads/I2A2/rhein-ai-agent-challenge
+   cd /Users/efantinatti/Downloads/I2A2/SkyNET-I2A2/Delivery/20251008
    python -m venv .venv
    source .venv/bin/activate  # Mac/Linux
    # ou .venv\Scripts\activate  # Windows
@@ -111,7 +111,7 @@ Preparando uma apresentação? Use:
 ## 📂 Estrutura de Arquivos
 
 ```
-rhein-ai-agent-challenge/
+SkyNET-I2A2/
 │
 ├── 📖 Documentação (COMECE AQUI!)
 │   ├── BEM_VINDO.md ⭐ (você está aqui)
@@ -262,7 +262,7 @@ Quer deixar ainda mais com a sua cara? Ideias:
 
 ### Suporte
 - GitHub Issues: https://github.com/efantinatti/SkyNET-I2A2/issues
-- Documentação original: https://github.com/fabiorhein/rhein-ai-agent-challenge
+- Repositório: https://github.com/efantinatti/SkyNET-I2A2
 
 ---
 

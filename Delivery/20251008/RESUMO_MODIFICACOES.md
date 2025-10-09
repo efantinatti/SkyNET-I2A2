@@ -132,7 +132,6 @@ A aplicação **InsightAgent EDA** foi **completamente personalizada** para **Er
 ### 5. `CREDITOS.md` ✅
 **Conteúdo:**
 - Créditos ao Ernani Fantinatti
-- Créditos ao desenvolvedor original (Fábio Rhein)
 - Agradecimentos a tecnologias usadas
 - Recursos e inspirações
 - Informações do projeto acadêmico
@@ -269,7 +268,6 @@ Use o **[RESUMO_EXECUTIVO.md](RESUMO_EXECUTIVO.md)** para apresentar o projeto.
 ### Repositórios
 - **GitHub Ernani:** https://github.com/efantinatti
 - **SkyNET-I2A2:** https://github.com/efantinatti/SkyNET-I2A2/tree/main/Delivery/Fantinatti
-- **Original:** https://github.com/fabiorhein/rhein-ai-agent-challenge
 
 ### Documentação
 - **Principal:** [README.md](README.md)
