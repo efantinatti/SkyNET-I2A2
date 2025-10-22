@@ -1,0 +1,1 @@
+# Chart renderer component
