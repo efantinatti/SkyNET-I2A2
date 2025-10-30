@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cteProc versao="3.00" xmlns="http://www.portalfiscal.inf.br/cte">
+  <CTe>
+    <infCte Id="CTe35200644681160000104570010000000011000000012" versao="3.00">
+      <ide>
+        <cUF>35</cUF>
+        <cCT>00000001</cCT>
+        <CFOP>5353</CFOP>
+        <natOp>PRESTACAO SERVICO TRANSPORTE</natOp>
+        <mod>57</mod>
+        <serie>1</serie>
+        <nCT>1</nCT>
+        <dhEmi>2020-10-01T10:20:10-03:00</dhEmi>
+        <tpImp>1</tpImp>
+        <tpEmis>1</tpEmis>
+        <cDV>2</cDV>
+        <tpAmb>1</tpAmb>
+        <tpCTe>0</tpCTe>
+        <procEmi>0</procEmi>
+        <verProc>1.0</verProc>
+        <indGlobalizado>0</indGlobalizado>
+        <cMunEnv>3550308</cMunEnv>
+        <xMunEnv>SAO PAULO</xMunEnv>
+        <UFEnv>SP</UFEnv>
+        <modal>01</modal>
+        <tpServ>0</tpServ>
+        <indIEToma>1</indIEToma>
+        <cMunIni>3550308</cMunIni>
+        <xMunIni>SAO PAULO</xMunIni>
+        <UFIni>SP</UFIni>
+        <cMunFim>3550308</cMunFim>
+        <xMunFim>SAO PAULO</xMunFim>
+        <UFFim>SP</UFFim>
+        <retira>0</retira>
+        <toma03>
+          <toma>0</toma>
+          <CNPJ>07504505000132</CNPJ>
+          <IE>123456789012</IE>
+          <xNome>EMPRESA TOMADORA LTDA</xNome>
+          <xFant>EMPRESA TOMADORA</xFant>
+          <fone>1133334444</fone>
+          <enderToma>
+            <xLgr>RUA DAS ACACIAS</xLgr>
+            <nro>1000</nro>
+            <xBairro>JD DAS FLORES</xBairro>
+            <cMun>3550308</cMun>
+            <xMun>SAO PAULO</xMun>
+            <UF>SP</UF>
+            <CEP>01310000</CEP>
+            <cPais>1058</cPais>
+            <xPais>BRASIL</xPais>
+          </enderToma>
+        </toma03>
+      </ide>
+      <emit>
+        <CNPJ>12345678000123</CNPJ>
+        <IE>123456789012</IE>
+        <xNome>TRANSPORTADORA TESTE LTDA</xNome>
+        <xFant>TRANSPORTE TESTE</xFant>
+        <enderEmit>
+          <xLgr>RUA DAS PALMEIRAS</xLgr>
+          <nro>1000</nro>
+          <xBairro>JD DAS ARVORES</xBairro>
+          <cMun>3550308</cMun>
+          <xMun>SAO PAULO</xMun>
+          <UF>SP</UF>
+          <CEP>01310000</CEP>
+        </enderEmit>
+      </emit>
+      <vPrest>
+        <vTPrest>1000.00</vTPrest>
+        <vRec>1000.00</vRec>
+        <Comp>
+          <xNome>FRETE PESO</xNome>
+          <vComp>1000.00</vComp>
+        </Comp>
+      </vPrest>
+      <imp>
+        <ICMS>
+          <ICMS00>
+            <CST>00</CST>
+            <vBC>1000.00</vBC>
+            <pICMS>12.00</pICMS>
+            <vICMS>120.00</vICMS>
+          </ICMS00>
+        </ICMS>
+      </imp>
+      <infCteComp>
+        <chCTe>35200644681160000104570010000000011000000012</chCTe>
+      </infCteComp>
+      <infCteAnu>
+        <chCte>35200644681160000104570010000000011000000012</chCte>
+        <dEmi>2020-10-01</dEmi>
+      </infCteAnu>
+    </infCte>
+  </CTe>
+  <protCTe versao="3.00">
+    <infProt>
+      <tpAmb>1</tpAmb>
+      <verAplic>SP_CTE_100</verAplic>
+      <chCTe>35200644681160000104570010000000011000000012</chCTe>
+      <dhRecbto>2020-10-01T10:25:10-03:00</dhRecbto>
+      <nProt>135200000000002</nProt>
+      <digVal>ghi789</digVal>
+      <cStat>100</cStat>
+      <xMotivo>Autorizado o uso do CT-e</xMotivo>
+    </infProt>
+  </protCTe>
+</cteProc>

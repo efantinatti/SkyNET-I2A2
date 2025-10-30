@@ -1,0 +1,17 @@
+[client]
+showErrorDetails = true
+
+[logger]
+level = "warning"
+
+[theme]
+primaryColor = "#1f77b4"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f0f2f6"
+textColor = "#262730"
+font = "sans serif"
+
+[server]
+port = 8501
+headless = true
+runOnSave = true

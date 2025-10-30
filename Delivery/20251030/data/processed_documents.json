@@ -1,0 +1,138 @@
+[
+  {
+    "file": "NF Nota fiscal.pdf",
+    "parsed": {
+      "raw_text": "RECEBEMOS DE B2W Companhia Digital OS PRODUTOS E/OU SERVIÇOS CONSTANTES DA NOTA FISCAL ELETRÔNICA INDICADA ABAIXO.\nEMISSÃO: 28/11/2020 VALOR TOTAL: R$ 2.689,99 DESTINATÁRIO: FABIO DIAS RHEIN - RUA ITABAIANA, 415 - ED MAR EGEU. TORRE D APTO 601\nPRAIA DE ITAPARICA Vila Velha-ESNF-e\nNº. 026.253.945\nSérie 005DATA DE RECEBIMENTO IDENTIFICAÇÃO E ASSINATURA DO RECEBEDOR\nIDENTIFICAÇÃO DO EMITENTE\nB2W Companhia Digital\nEst de Miguel Pereira, 125 - Carretao lote 151/30 e 151/27\nSão Miguel - 23893-890\nSeropedica - RJ Fone/Fax:DANFE\nDocumento Auxiliar da Nota\nFiscal Eletrônica\n0 - ENTRADA\n1 - SAÍDA 1\nNº. 026.253.945\nSérie 005\nFolha 1/1\nCHAVE DE ACESSO\n3320 1100 7765 7400 1390 5500 5026 2539 4515 2970 6857\nConsulta de autenticidade no portal nacional da NF-e\nwww.nfe.fazenda.gov.br/portal ou no site da Sefaz Autorizadora\nNATUREZA DA OPERAÇÃO\nVenda Merc Adq Terc N/ContribPROTOCOLO DE AUTORIZAÇÃO DE USO\n333200174861366  -  28/11/2020 17:43:49\nINSCRIÇÃO ESTADUAL\n79538914INSCRIÇÃO MUNICIPAL\nINSCRIÇÃO ESTADUAL DO SUBST. TRIBUT.\n000025763CNPJ / CPF\n00.776.574/0013-90\nDESTINATÁRIO / REMETENTE\nNOME / RAZÃO SOCIAL\nFABIO DIAS RHEINCNPJ / CPF\n057.987.817-12DATA DA EMISSÃO\n28/11/2020\nENDEREÇO\nRUA ITABAIANA, 415 - ED MAR EGEU. TORRE D APTO 601BAIRRO / DISTRITO\nPRAIA DE ITAPARICACEP\n29102-290DATA DA SAÍDA/ENTRADA\n28/11/2020\nMUNICÍPIO\nVila VelhaUF\nESFONE / FAX\n2732085340INSCRIÇÃO ESTADUAL\nHORA DA SAÍDA/ENTRADA\n17:43:00\nPAGAMENTO\nForma Outros\nValor R$ 2.689,99\nCÁLCULO DO IMPOSTO\nBASE DE CÁLC. DO ICMS\n2.689,99VALOR DO ICMS\n188,30BASE DE CÁLC. ICMS S.T.\n0,00VALOR DO ICMS SUBST.\n0,00V. IMP. IMPORTAÇÃO\n0,00V. ICMS UF REMET.\n0,00V. FCP UF DEST.\n0,00VALOR DO PIS\n44,38V. TOTAL PRODUTOS\n2.689,99\nVALOR DO FRETE\n0,00VALOR DO SEGURO\n0,00DESCONTO\n0,00OUTRAS DESPESAS\n0,00VALOR TOTAL IPI\n0,00V. ICMS UF DEST.\n269,00V. TOT. TRIB.\n951,18VALOR DA COFINS\n204,44V. TOTAL DA NOTA\n2.689,99\nTRANSPORTADOR / VOLUMES TRANSPORTADOS\nNOME / RAZÃO SOCIAL\nFRETE\n0-Por conta do RemCÓDIGO ANTT\nPLACA DO VEÍCULO\nUF\nCNPJ / CPF\nENDEREÇO\nMUNICÍPIO\nUF\nINSCRIÇÃO ESTADUAL\nQUANTIDADE\n1ESPÉCIE\nVOLSMARCA\nNUMERAÇÃO\nPESO BRUTO\n17,200PESO LÍQUIDO\n17,200\nDADOS DOS PRODUTOS / SERVIÇOS\nCÓDIGO PRODUTO DESCRIÇÃO DO PRODUTO / SERVIÇO NCM/SH O/CST CFOP UN QUANTVALOR\nUNITVALOR\nTOTALVALOR\nDESCB.CÁLC\nICMSVALOR\nICMSVALOR\nIPIALÍQ.\nICMSALÍQ.\nIPI\n1639026631 SMART TV 50'' SAMSUNG QLED 4K 50Q60T.\nPONTOS QUANTICOS. BORDA INFINITA.\nALEXA BUILT IN. MODO AMBIENTE FOTO.\nCONTROLE UN\npFCPUFDest=0,00% pICMSUFDest=17,00%\npICMSInterPart=100,00% vFCPUFDest=0,00\nvICMSUFDest=269,00 vICMSUFRemet=0,0085287200 0006108PC 1,00002.689,9900 2.689,99 0,002.689,99 188,30 7,00 \nDADOS ADICIONAIS\nINFORMAÇÕES COMPLEMENTARES\nInf. Contribuinte: Lei n 5.817/10 - PROCON-RJ: tel. 151. end. Av. Rio Branco. 25 - 5 andar. Centro/RJ. CODECON:\ntel. 0800 282 7060. end. R. da Alfândega. 8. Centro/RJ. N.Pedido: 03-525997065. N.Entrega: 352599706501. Regime\nEspecial Portaria SAF n 1.123 de 24 de outubro de 2012 - Processo 04/129318/12. Trib aprox R$ 413.18 Federal e R$\n538.00 Estadual. Fonte: IBPT/FECOMERCIO RJ. EC 87/2015 - TOTAL FECP: R$ 0.00 TOTAL ICMS UF\nORIGEM: R$ 0.00 TOTAL ICMS UF DESTINO: R$ 269.00\nDevCO: FT\nSiglaERP: UMBRELLA\nCallback: WMS\nParcDANFE: FAZEMU\nLogo: SUBA\nValor Aproximado dos Tributos : R$ 951,18RESERVADO AO FISCO\nImpresso em 14/02/2025 as 14:41:19 Gerado em www.fsist.com.br",
+      "emitente": {
+        "cnpj": "33320017486136"
+      },
+      "destinatario": {
+        "cnpj_cpf": "05798781712"
+      },
+      "itens": [
+        {
+          "descricao": "3320 1100 7765 7400 1390 5500 5026 2539 4515",
+          "quantidade": 2970.0,
+          "valor_unitario": null,
+          "valor_total": 6857.0
+        },
+        {
+          "descricao": "INSCRIÇÃO ESTADUAL DO",
+          "quantidade": null,
+          "valor_unitario": null,
+          "valor_total": null
+        },
+        {
+          "descricao": "269,00V.",
+          "quantidade": null,
+          "valor_unitario": null,
+          "valor_total": null
+        },
+        {
+          "descricao": "vICMSUFDest=269,00 vICMSUFRemet=0,0085287200 0006108PC 1,00002.689,9900 2.689,99 0,002.689,99",
+          "quantidade": 188.3,
+          "valor_unitario": null,
+          "valor_total": 7.0
+        }
+      ],
+      "impostos": {},
+      "total": 26900.0,
+      "data_emissao": "28/11/2020",
+      "numero": "026"
+    }
+  },
+  {
+    "file": "35080599999090910270550010000000015180051273_NFE Assinada.pdf",
+    "parsed": {
+      "raw_text": "RECEBEMOS DE DISTRIBUIDORA DE AGUAS MINERAIS - AV DAS FONTES, 1777 - 10 ANDAR PARQUE FONTES Sao Paulo-SP OS PRODUTOS E/OU\nSERVIÇOS CONSTANTES DA NOTA FISCAL ELETRÔNICA INDICADA AO LADO. EMISSÃO: 06/05/2008 VALOR TOTAL: R$ 20.000.000,00\nDESTINATÁRIO: NF-e Associacao NF-eNF-e\nNº. 000.000.001\nSérie 001DATA DO RECEBIMENTO IDENTIFICAÇÃO E ASSINATURA DO RECEBEDOR\nIDENTIFICAÇÃO DO EMITENTE\nNF-e Associacao NF-e\nRua Central,100  Fundos\nDistrito Industrial - 17100-171\nAngatuba - SP Fone/Fax: (17) 3302-1717DANFE\nDocumento Auxiliar da Nota\nFiscal Eletrônica\n0 - ENTRADA\n1 - SAÍDA 0\nNº. 000.000.001\nSérie 001\nFolha 1/1\nCHAVE DE ACESSO\n3508 0599 9990 9091 0270 5500 1000 0000 0151 8005 1273\nConsulta de autenticidade no portal nacional da NF-e\nwww.nfe.fazenda.gov.br/portal ou no site da Sefaz Autorizadora\nNATUREZA DA OPERAÇÃO\nVenda a vistaPROTOCOLO DE AUTORIZAÇÃO DE USO\nINSCRIÇÃO ESTADUAL\n123456789012INSCRIÇÃO ESTADUAL DO SUBST. TRIBUT.\nCNPJ\n99.999.090/9102-70\nSEM VALOR FISCAL\nAMBIENTE DE HOMOLOGAÇÃODESTINATÁRIO / REMETENTE\nNOME / RAZÃO SOCIAL\nDISTRIBUIDORA DE AGUAS MINERAISCNPJ / CPF\n00.000.000/0001-91DATA DA EMISSÃO\n06/05/2008\nENDEREÇO\nAV DAS FONTES, 1777 10 ANDARBAIRRO / DISTRITO\nPARQUE FONTESCEP\n13950-000DATA DA SAÍDA\n06/05/2008\nMUNICÍPIO\nSao PauloUF\nSPFONE / FAX\n(19) 3201-1234INSCRIÇÃO ESTADUAL\nHORA DA SAÍDA\nCÁLCULO DO IMPOSTO\nBASE DE CÁLCULO DO ICMS\n20.000.000,00VALOR DO ICMS\n18,00BASE DE CÁLCULO DO ICMS S.T.\n0,00VALOR DO ICMS SUBSTITUIÇÃO\n0,00VALOR DO PIS\n130.000,00VALOR TOTAL DOS PRODUTOS\n20.000.000,00\nVALOR DO FRETE\n0,00VALOR DO SEGURO\n0,00DESCONTO\n0,00OUTRAS DESPESAS\n0,00VALOR TOTAL DO IPI\n0,00VALOR DO COFINS\n400.000,00VALOR TOTAL DA NOTA\n20.000.000,00\nTRANSPORTADOR / VOLUMES TRANSPORTADOS\nNOME / RAZÃO SOCIAL\nDistribuidora de Bebidas Fazenda de SP Ltda.FRETE POR CONTA\n(0) EmitenteCÓDIGO ANTT\n123456789PLACA DO VEÍCULO\nBXI1717UF\nSPCNPJ / CPF\n99.171.171/0001-91\nENDEREÇO\nRua Central 100 - Fundos - Distrito IndustrialMUNICÍPIO\nSAO PAULOUF\nSPINSCRIÇÃO ESTADUAL\n171999999119\nQUANTIDADE\n10000ESPÉCIE\nCAIXAMARCA\nLINDOYANÚMERO\n500PESO BRUTO\n1.200.000.000,000PESO LÍQUIDO\n1.000.000.000,000\nDADOS DOS PRODUTOS / SERVIÇOS\nCÓDIGO PRODUTO DESCRIÇÃO DO PRODUTO / SERVIÇO NCM/SH O/CST CFOP UN QUANTVALOR\nUNITVALOR\nTOTALB.CÁLC\nICMSVALOR\nICMSVALOR\nIPIALÍQ.\nICMSALÍQ.\nIPI\n00001 Agua Mineral 0005101 dz1.000.000,00 1,0000 10.000.000,00 10.000.000,00 1.800.000,00 18\n00002 Agua Mineral 0005101 pack 5.000.000,00 2,0000 10.000.000,00 10.000.000,00 1.800.000,00 18\nDADOS ADICIONAIS\nINFORMAÇÕES COMPLEMENTARES\nLOCAL DA RETIRADA DA MERCADORIA : AV PAULISTA,12345 TERREO - CERQUEIRA CESAR SAO PAULO - SP\n.\nLOCAL DA ENTREGA DA MERCADORIA : AV FARIA LIMA,1500 15 ANDAR - PINHEIROS SAO PAULO - SP\n.\nInf. fisco: Nota Fiscal de exemplo NF-eletronica.comRESERVADO AO FISCO\nImpresso com o WebDANFE ( www.webdanfe.com.br ). Powered by NFePHP.",
+      "emitente": {
+        "cnpj": "99999090910270"
+      },
+      "destinatario": {
+        "cnpj_cpf": "12345678901"
+      },
+      "itens": [
+        {
+          "descricao": "3508 0599 9990 9091 0270 5500 1000 0000 0151",
+          "quantidade": 8005.0,
+          "valor_unitario": null,
+          "valor_total": 1273.0
+        },
+        {
+          "descricao": "00001 Agua Mineral 0005101 dz1.000.000,00 1,0000 10.000.000,00 10.000.000,00",
+          "quantidade": null,
+          "valor_unitario": null,
+          "valor_total": 18.0
+        },
+        {
+          "descricao": "00002 Agua Mineral 0005101 pack 5.000.000,00 2,0000 10.000.000,00 10.000.000,00",
+          "quantidade": null,
+          "valor_unitario": null,
+          "valor_total": 18.0
+        }
+      ],
+      "impostos": {},
+      "total": null,
+      "data_emissao": "06/05/2008",
+      "numero": "000"
+    }
+  },
+  {
+    "file": "NFe_assinada.xml",
+    "parsed": {
+      "emitente": {
+        "razao_social": "NF-e Associacao NF-e",
+        "cnpj": "99999090910270",
+        "inscricao_estadual": "123456789012"
+      },
+      "destinatario": {
+        "razao_social": null,
+        "cnpj_cpf": null
+      },
+      "numero": "1",
+      "data_emissao": "2008-05-06",
+      "itens": [
+        {
+          "descricao": "Agua Mineral",
+          "quantidade": 1000000.0,
+          "valor_unitario": 1.0,
+          "valor_total": 10000000.0,
+          "ncm": null,
+          "cfop": "5101",
+          "cst": "00"
+        },
+        {
+          "descricao": "Agua Mineral",
+          "quantidade": 5000000.0,
+          "valor_unitario": 2.0,
+          "valor_total": 10000000.0,
+          "ncm": null,
+          "cfop": "5101",
+          "cst": "00"
+        }
+      ],
+      "impostos": {
+        "icms": 1800000.0,
+        "ipi": 0.0,
+        "pis": 65000.0,
+        "cofins": 200000.0,
+        "icms_st": null
+      },
+      "cfop": "5101",
+      "total": 20000000.0,
+      "raw_xml": "<NFe xmlns=\"http://www.portalfiscal.inf.br/nfe\">\n    <infNFe Id=\"NFe35080599999090910270550010000000015180051273\" versao=\"1.10\">\n        <ide>\n            <cUF>35</cUF>\n            <cNF>518005127</cNF>\n            <natOp>Venda a vista</natOp>\n            <indPag>0</indPag>\n            <mod>55</mod>\n            <serie>1</serie>\n            <nNF>1</nNF>\n            <dEmi>2008-05-06</dEmi>\n            <dSaiEnt>2008-05-06</dSaiEnt>\n            <tpNF>0</tpNF>\n            <cMunFG>3550308</cMunFG>\n            <tpImp>1</tpImp>\n            <tpEmis>1</tpEmis>\n            <cDV>3</cDV>\n            <tpAmb>2</tpAmb>\n            <finNFe>1</finNFe>\n            <procEmi>0</procEmi>\n            <verProc>NF-eletronica.com</verProc>\n        </ide>\n        <emit>\n            <CNPJ>99999090910270</CNPJ>\n            <xNome>NF-e Associacao NF-e</xNome>\n            <xFant>NF-e</xFant>\n            <enderEmit>\n                <xLgr>Rua Central</xLgr>\n                <nro>100</nro>\n                <xCpl>Fundos</xCpl>\n                <xBairro>Distrito Industrial</xBairro>\n                <cMun>3502200</cMun>\n                <xMun>Angatuba</xMun>\n                <UF>SP</UF>\n                <CEP>17100171</CEP>\n                <cPais>1058</cPais>\n                <xPais>Brasil</xPais>\n                <fone>1733021717</fone>\n            </enderEmit>\n            <IE>123456789012</IE>\n        </emit>\n        <dest>\n            <CNPJ>00000000000191</CNPJ>\n            <xNome>DISTRIBUIDORA DE AGUAS MINERAIS</xNome>\n            <enderDest>\n                <xLgr>AV DAS FONTES</xLgr>\n                <nro>1777</nro>\n                <xCpl>10 ANDAR</xCpl>\n                <xBairro>PARQUE FONTES</xBairro>\n                <cMun>5030801</cMun>\n                <xMun>Sao Paulo</xMun>\n                <UF>SP</UF>\n                <CEP>13950000</CEP>\n                <cPais>1058</cPais>\n                <xPais>BRASIL</xPais>\n                <fone>1932011234</fone>\n            </enderDest>\n            <IE>\n            </IE>\n        </dest>\n        <retirada>\n            <CNPJ>99171171000194</CNPJ>\n            <xLgr>AV PAULISTA</xLgr>\n            <nro>12345</nro>\n            <xCpl>TERREO</xCpl>\n            <xBairro>CERQUEIRA CESAR</xBairro>\n            <cMun>3550308</cMun>\n            <xMun>SAO PAULO</xMun>\n            <UF>SP</UF>\n        </retirada>\n        <entrega>\n            <CNPJ>99299299000194</CNPJ>\n            <xLgr>AV FARIA LIMA</xLgr>\n            <nro>1500</nro>\n            <xCpl>15 ANDAR</xCpl>\n            <xBairro>PINHEIROS</xBairro>\n            <cMun>3550308</cMun>\n            <xMun>SAO PAULO</xMun>\n            <UF>SP</UF>\n        </entrega>\n        <det nItem=\"1\">\n            <prod>\n                <cProd>00001</cProd>\n                <cEAN />\n                <xProd>Agua Mineral</xProd>\n                <CFOP>5101</CFOP>\n                <uCom>dz</uCom>\n                <qCom>1000000.0000</qCom>\n                <vUnCom>1</vUnCom>\n                <vProd>10000000.00</vProd>\n                <cEANTrib />\n                <uTrib>und</uTrib>\n                <qTrib>12000000.0000</qTrib>\n                <vUnTrib>1</vUnTrib>\n            </prod>\n            <imposto>\n                <ICMS>\n                    <ICMS00>\n                        <orig>0</orig>\n                        <CST>00</CST>\n                        <modBC>0</modBC>\n                        <vBC>10000000.00</vBC>\n                        <pICMS>18.00</pICMS>\n                        <vICMS>1800000.00</vICMS>\n                    </ICMS00>\n                </ICMS>\n                <PIS>\n                    <PISAliq>\n                        <CST>01</CST>\n                        <vBC>10000000.00</vBC>\n                        <pPIS>0.65</pPIS>\n                        <vPIS>65000</vPIS>\n                    </PISAliq>\n                </PIS>\n                <COFINS>\n                    <COFINSAliq>\n                        <CST>01</CST>\n                        <vBC>10000000.00</vBC>\n                        <pCOFINS>2.00</pCOFINS>\n                        <vCOFINS>200000.00</vCOFINS>\n                    </COFINSAliq>\n                </COFINS>\n            </imposto>\n        </det>\n        <det nItem=\"2\">\n            <prod>\n                <cProd>00002</cProd>\n                <cEAN />\n                <xProd>Agua Mineral</xProd>\n                <CFOP>5101</CFOP>\n                <uCom>pack</uCom>\n                <qCom>5000000.0000</qCom>\n                <vUnCom>2</vUnCom>\n                <vProd>10000000.00</vProd>\n                <cEANTrib />\n                <uTrib>und</uTrib>\n                <qTrib>3000000.0000</qTrib>\n                <vUnTrib>0.3333</vUnTrib>\n            </prod>\n            <imposto>\n                <ICMS>\n                    <ICMS00>\n                        <orig>0</orig>\n                        <CST>00</CST>\n                        <modBC>0</modBC>\n                        <vBC>10000000.00</vBC>\n                        <pICMS>18.00</pICMS>\n                        <vICMS>1800000.00</vICMS>\n                    </ICMS00>\n                </ICMS>\n                <PIS>\n                    <PISAliq>\n                        <CST>01</CST>\n                        <vBC>10000000.00</vBC>\n                        <pPIS>0.65</pPIS>\n                        <vPIS>65000</vPIS>\n                    </PISAliq>\n                </PIS>\n                <COFINS>\n                    <COFINSAliq>\n                        <CST>01</CST>\n                        <vBC>10000000.00</vBC>\n                        <pCOFINS>2.00</pCOFINS>\n                        <vCOFINS>200000.00</vCOFINS>\n                    </COFINSAliq>\n                </COFINS>\n            </imposto>\n        </det>\n        <total>\n            <ICMSTot>\n                <vBC>20000000.00</vBC>\n                <vICMS>18.00</vICMS>\n                <vBCST>0</vBCST>\n                <vST>0</vST>\n                <vProd>20000000.00</vProd>\n                <vFrete>0</vFrete>\n                <vSeg>0</vSeg>\n                <vDesc>0</vDesc>\n                <vII>0</vII>\n                <vIPI>0</vIPI>\n                <vPIS>130000.00</vPIS>\n                <vCOFINS>400000.00</vCOFINS>\n                <vOutro>0</vOutro>\n                <vNF>20000000.00</vNF>\n            </ICMSTot>\n        </total>\n        <transp>\n            <modFrete>0</modFrete>\n            <transporta>\n                <CNPJ>99171171000191</CNPJ>\n                <xNome>Distribuidora de Bebidas Fazenda de SP Ltda.</xNome>\n                <IE>171999999119</IE>\n                <xEnder>Rua Central 100 - Fundos - Distrito Industrial</xEnder>\n                <xMun>SAO PAULO</xMun>\n                <UF>SP</UF>\n            </transporta>\n            <veicTransp>\n                <placa>BXI1717</placa>\n                <UF>SP</UF>\n                <RNTC>123456789</RNTC>\n            </veicTransp>\n            <reboque>\n                <placa>BXI1818</placa>\n                <UF>SP</UF>\n                <RNTC>123456789</RNTC>\n            </reboque>\n            <vol>\n                <qVol>10000</qVol>\n                <esp>CAIXA</esp>\n                <marca>LINDOYA</marca>\n                <nVol>500</nVol>\n                <pesoL>1000000000.000</pesoL>\n                <pesoB>1200000000.000</pesoB>\n                <lacres>\n                    <nLacre>XYZ10231486</nLacre>\n                </lacres>\n            </vol>\n        </transp>\n        <infAdic>\n            <infAdFisco>Nota Fiscal de exemplo NF-eletronica.com</infAdFisco>\n        </infAdic>\n    </infNFe>\n    <Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\">\n        <SignedInfo>\n            <CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" />\n            <SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\" />\n            <Reference URI=\"#NFe35080599999090910270550010000000015180051273\">\n                <Transforms>\n                    <Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" />\n                    <Transform Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" />\n                </Transforms>\n                <DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\" />\n                <DigestValue>xhTSDMH61e9uqe04lnoHT4ZzLSY=</DigestValue>\n            </Reference>\n        </SignedInfo>\n        <SignatureValue>Iz5Z3PLQbzZt9jnBtr6xsmHZMOu/3plXG9xxfFjRCQYGnD1rjlhzBGrqt026Ca2VHHM/bHNepi6FuFkAi595GScKVuHREUotzifE2OIjgavvTOrMwbXG7+0LYgkwPFiPCao2S33UpZe7MneaxcmKQGKQZw1fP8fsWmaQ4cczZT8=</SignatureValue>\n        <KeyInfo>\n            <X509Data>\n                <X509Certificate>MIIEuzCCA6OgAwIBAgIDMTMxMA0GCSqGSIb3DQEBBQUAMIGSMQswCQYDVQQGEwJCUjELMAkGA1UECBMCUlMxFTATBgNVBAcTDFBvcnRvIEFsZWdyZTEdMBsGA1UEChMUVGVzdGUgUHJvamV0byBORmUgUlMxHTAbBgNVBAsTFFRlc3RlIFByb2pldG8gTkZlIFJTMSEwHwYDVQQDExhORmUgLSBBQyBJbnRlcm1lZGlhcmlhIDEwHhcNMDgwNDI4MDkwMTAyWhcNMDkwNDMwMjM1OTU5WjCBnjELMAkGA1UECBMCUlMxHTAbBgNVBAsTFFRlc3RlIFByb2pldG8gTkZlIFJTMR0wGwYDVQQKExRUZXN0ZSBQcm9qZXRvIE5GZSBSUzEVMBMGA1UEBxMMUE9SVE8gQUxFR1JFMQswCQYDVQQGEwJCUjEtMCsGA1UEAxMkTkZlIC0gQXNzb2NpYWNhbyBORi1lOjk5OTk5MDkwOTEwMjcwMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDDh6RRv0bj4RYX+tDQrZRb5opa77LBVVs+6LphIfSF3TSWPfnKh0+xLlBFdmnB5YGgbbW9Uon6pZQTfaC8jZhRhI5eFRRofY/Ugoeo0NGt6PcIQNZQd6lLQ/ASd1qWwjqJoEa7udriKjy3h351Mf1bng1VxS1urqC3Dn39ZWIEwQIDAQABo4IBjjCCAYowIgYDVR0jAQEABBgwFoAUPT5TqhNWAm+ZpcVsvB7malDBjEQwDwYDVR0TAQH/BAUwAwEBADAPBgNVHQ8BAf8EBQMDAOAAMAwGA1UdIAEBAAQCMAAwgbwGA1UdEQEBAASBsTCBrqA4BgVgTAEDBKAvBC0wNzA4MTk1MTE1MTk0NTMxMDg3MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDCgHQYFYEwBAwKgFAQSRmVybmFuZG8gQ2FudG8gQWx0oBkGBWBMAQMDoBAEDjk5OTk5MDkwOTEwMjcwoBcGBWBMAQMHoA4EDDAwMDAwMDAwMDAwMIEfZmVybmFuZG8tYWx0QHByb2NlcmdzLnJzLmdvdi5icjAgBgNVHSUBAf8EFjAUBggrBgEFBQcDAgYIKwYBBQUHAwQwUwYDVR0fAQEABEkwRzBFoEOgQYY/aHR0cDovL25mZWNlcnRpZmljYWRvLnNlZmF6LnJzLmdvdi5ici9MQ1IvQUNJbnRlcm1lZGlhcmlhMzguY3JsMA0GCSqGSIb3DQEBBQUAA4IBAQCNPpaZ3Byu3/70nObXE8NiM53j1ddIFXsb+v2ghCVd4ffExv3hYc+/a3lfgV8H/WfQsdSCTzS2cHrd4Aasr/eXfclVDmf2hcWz+R7iysOHuT6B6r+DvV3JcMdJJCDdynR5REa+zViMnVZo1G3KuceQ7/y5X3WFNVq4kwHvonJ9oExsWyw8rTwUK5bsjz0A2yEwXkmkJIngnF41sP31+9jCImiqkXcmsesFhxzX7iurAQAQCZOm7iwMWxQKcAjXCZrgSZWRQy6mU224sX3HTArHahmLJ9Iw+WYAua5qBJsiN6PC7v5tfhrEQFpcG39yMnOecxvkkPolDUyBa7d7xwgm</X509Certificate>\n            </X509Data>\n        </KeyInfo>\n    </Signature>\n</NFe>\n"
+    },
+    "classification": {
+      "tipo": "venda",
+      "setor": "industria",
+      "perfil_emitente": "fornecedor",
+      "validacao": {
+        "status": "error",
+        "issues": [
+          "CNPJ inválido do emitente"
+        ],
+        "calculated_sum": 20000000.0
+      }
+    }
+  }
+]

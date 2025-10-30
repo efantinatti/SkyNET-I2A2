@@ -1,0 +1,1010 @@
+{
+  "documents": [
+    {
+      "file_name": "test_document_data.xml",
+      "document_type": "NFe",
+      "document_number": "77777",
+      "issuer_cnpj": "12345678000195",
+      "extracted_data": {
+        "emitente": {
+          "cnpj": "12345678000195",
+          "razao_social": "Teste Ltda"
+        },
+        "itens": [
+          {
+            "descricao": "Produto teste",
+            "valor": 100.0
+          }
+        ],
+        "totais": {
+          "valor_total": 100.0
+        }
+      },
+      "classification": {
+        "tipo": "venda",
+        "categoria": "mercadorias",
+        "confianca": 0.95
+      },
+      "validation_details": {
+        "issues": [],
+        "warnings": [],
+        "validations": {
+          "cnpj": true,
+          "itens": true
+        }
+      },
+      "metadata": {
+        "has_issues": false,
+        "has_warnings": false,
+        "item_count": 1,
+        "document_subtype": "Outros"
+      },
+      "document_data": {
+        "additional_info": "Dados adicionais do documento",
+        "processing_metadata": {
+          "source": "xml_upload",
+          "timestamp": "2025-01-27T10:30:00Z",
+          "version": "1.0"
+        }
+      },
+      "id": "1",
+      "created_at": "2025-10-27T13:33:23.135645+00:00"
+    },
+    {
+      "file_name": "nfe_teste_completo.xml",
+      "document_type": "NFe",
+      "document_number": "99999",
+      "issuer_cnpj": "12345678000199",
+      "issuer_name": "EMPRESA TESTE COMPLETA LTDA",
+      "total_value": 1500.75,
+      "extracted_data": {
+        "emitente": {
+          "razao_social": "EMPRESA TESTE COMPLETA LTDA",
+          "cnpj": "12345678000199",
+          "endereco": "Rua das Flores, 123",
+          "municipio": "São Paulo",
+          "uf": "SP"
+        },
+        "destinatario": {
+          "razao_social": "CLIENTE TESTE S.A.",
+          "cnpj": "98765432000100"
+        },
+        "itens": [
+          {
+            "codigo": "001",
+            "descricao": "Produto Teste Premium A",
+            "quantidade": 3,
+            "valor_unitario": 250.25,
+            "valor_total": 750.75
+          },
+          {
+            "codigo": "002",
+            "descricao": "Produto Teste Premium B",
+            "quantidade": 2,
+            "valor_unitario": 375.0,
+            "valor_total": 750.0
+          }
+        ],
+        "totais": {
+          "valor_produtos": 1500.75,
+          "valor_total": 1500.75,
+          "icms_total": 270.14
+        }
+      },
+      "classification": {
+        "tipo": "venda",
+        "categoria": "mercadorias",
+        "confianca": 0.98,
+        "modelo": "gemini-1.5-flash",
+        "validacao": {
+          "status": "success",
+          "issues": [],
+          "warnings": [
+            "Campo complementar não informado"
+          ],
+          "validations": {
+            "emitente": {
+              "cnpj": true,
+              "razao_social": true
+            },
+            "itens": {
+              "has_items": true,
+              "all_valid": true
+            },
+            "totais": {
+              "valid": true
+            }
+          }
+        }
+      },
+      "validation_details": {
+        "status": "success",
+        "issues": [],
+        "warnings": [
+          "Campo complementar não informado"
+        ],
+        "validations": {
+          "emitente": {
+            "cnpj": true,
+            "razao_social": true
+          },
+          "itens": {
+            "has_items": true,
+            "all_valid": true
+          },
+          "totais": {
+            "valid": true
+          }
+        }
+      },
+      "validation_status": "success",
+      "raw_text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<NFe xmlns=\"http://www.portalfiscal.inf.br/nfe\">\n  <infNFe versao=\"4.00\" Id=\"NFe123456789\">\n    <emit>\n      <CNPJ>12345678000199</CNPJ>\n      <xNome>EMPRESA TESTE COMPLETA LTDA</xNome>\n    </emit>\n  </infNFe>\n</NFe>",
+      "uploaded_at": "2025-10-27T13:33:46.372080+00:00",
+      "processed_at": "2025-10-27T13:33:46.372093+00:00",
+      "metadata": {
+        "has_issues": false,
+        "has_warnings": true,
+        "item_count": 2,
+        "document_subtype": "Outros"
+      },
+      "document_data": {
+        "additional_info": "Dados adicionais do documento",
+        "processing_metadata": {
+          "source": "xml_upload",
+          "timestamp": "2025-10-27T13:33:46.372095+00:00",
+          "version": "2.0",
+          "confidence": 0.98
+        },
+        "quality_metrics": {
+          "ocr_quality": 0.95,
+          "data_completeness": 0.92,
+          "validation_score": 0.98
+        }
+      },
+      "id": "2",
+      "created_at": "2025-10-27T13:33:46.372223+00:00"
+    },
+    {
+      "file_name": "final.xml",
+      "document_type": "NFe",
+      "document_number": "99999",
+      "issuer_cnpj": "12345678000195",
+      "id": "3",
+      "created_at": "2025-10-27T13:34:36.830854+00:00"
+    },
+    {
+      "file_name": "test_recipient.xml",
+      "document_type": "NFe",
+      "document_number": "88888",
+      "issuer_cnpj": "12345678000195",
+      "issuer_name": "Emitente Teste Ltda",
+      "recipient_cnpj": "98765432000100",
+      "recipient_name": "Destinatário Teste S.A.",
+      "issue_date": "2025-01-27T10:30:00Z",
+      "total_value": 1000.0,
+      "cfop": "5102",
+      "extracted_data": {
+        "emitente": {
+          "cnpj": "12345678000195",
+          "razao_social": "Emitente Teste Ltda"
+        },
+        "destinatario": {
+          "cnpj": "98765432000100",
+          "razao_social": "Destinatário Teste S.A."
+        },
+        "itens": [
+          {
+            "descricao": "Produto teste",
+            "valor": 1000.0
+          }
+        ]
+      },
+      "classification": {
+        "tipo": "venda",
+        "categoria": "teste"
+      },
+      "validation_details": {
+        "issues": [],
+        "warnings": [],
+        "validations": {}
+      },
+      "validation_status": "success",
+      "raw_text": "xml content",
+      "uploaded_at": "2025-01-27T10:30:00Z",
+      "processed_at": "2025-01-27T10:30:05Z",
+      "metadata": {
+        "has_issues": false,
+        "item_count": 1
+      },
+      "document_data": {
+        "test": true
+      },
+      "id": "4",
+      "created_at": "2025-10-27T13:41:18.875286+00:00"
+    },
+    {
+      "file_name": "validation_test.xml",
+      "document_type": "NFe",
+      "document_number": "99999",
+      "issuer_cnpj": "12345678000199",
+      "issuer_name": "EMPRESA TESTE LTDA",
+      "recipient_cnpj": "98765432000100",
+      "recipient_name": "CLIENTE TESTE S.A.",
+      "issue_date": "2025-01-27T10:30:00Z",
+      "total_value": 1500.0,
+      "cfop": "5102",
+      "extracted_data": {
+        "emitente": {
+          "cnpj": "12345678000199",
+          "razao_social": "EMPRESA TESTE LTDA"
+        },
+        "destinatario": {
+          "cnpj": "98765432000100",
+          "razao_social": "CLIENTE TESTE S.A."
+        },
+        "itens": [
+          {
+            "codigo": "001",
+            "descricao": "Produto A",
+            "quantidade": 2,
+            "valor_unitario": 500.0,
+            "valor_total": 1000.0
+          },
+          {
+            "codigo": "002",
+            "descricao": "Produto B",
+            "quantidade": 1,
+            "valor_unitario": 500.0,
+            "valor_total": 500.0
+          }
+        ],
+        "totais": {
+          "valor_produtos": 1500.0,
+          "valor_total": 1500.0
+        }
+      },
+      "classification": {
+        "tipo": "venda",
+        "categoria": "mercadorias",
+        "confianca": 0.95,
+        "modelo": "gemini-1.5-flash"
+      },
+      "validation_details": {
+        "status": "success",
+        "issues": [],
+        "warnings": [
+          "Campo opcional não informado"
+        ],
+        "validations": {
+          "emitente": {
+            "cnpj": true,
+            "razao_social": true
+          },
+          "destinatario": {
+            "cnpj": true,
+            "razao_social": true
+          },
+          "itens": {
+            "has_items": true,
+            "all_valid": true
+          },
+          "totais": {
+            "valid": true
+          }
+        }
+      },
+      "validation_status": "success",
+      "raw_text": "<?xml version=\"1.0\"?><NFe><infNFe>teste</infNFe></NFe>",
+      "uploaded_at": "2025-01-27T10:30:00Z",
+      "processed_at": "2025-01-27T10:30:05Z",
+      "metadata": {
+        "has_issues": false,
+        "has_warnings": true,
+        "item_count": 2,
+        "document_subtype": "NFe"
+      },
+      "document_data": {
+        "additional_info": "Dados adicionais do documento",
+        "processing_metadata": {
+          "source": "manual_test",
+          "timestamp": "2025-01-27T10:35:00Z"
+        }
+      },
+      "id": "5",
+      "created_at": "2025-10-27T13:42:14.156461+00:00"
+    },
+    {
+      "file_name": "date_test.xml",
+      "document_type": "NFe",
+      "document_number": "99999",
+      "issuer_cnpj": "12345678000199",
+      "issue_date": "28/08/2025",
+      "total_value": 100.0,
+      "extracted_data": {
+        "emitente": {
+          "cnpj": "12345678000199"
+        }
+      },
+      "classification": {
+        "tipo": "venda"
+      },
+      "validation_details": {
+        "issues": [],
+        "warnings": []
+      },
+      "metadata": {
+        "has_issues": false
+      },
+      "id": "6",
+      "created_at": "2025-10-27T13:55:15.512827+00:00"
+    },
+    {
+      "file_name": "simulated_upload.xml",
+      "document_type": "NFe",
+      "document_number": "12345",
+      "issuer_cnpj": "12345678000199",
+      "issuer_name": "EMPRESA TESTE LTDA",
+      "recipient_cnpj": "98765432000100",
+      "recipient_name": "CLIENTE TESTE S.A.",
+      "issue_date": "2025-08-28T00:00:00Z",
+      "total_value": 500.0,
+      "cfop": "5102",
+      "extracted_data": {
+        "document_type": "NFe",
+        "numero": "12345",
+        "data_emissao": "28/08/2025",
+        "emitente": {
+          "cnpj": "12345678000199",
+          "razao_social": "EMPRESA TESTE LTDA",
+          "endereco": "Rua das Flores, 123"
+        },
+        "destinatario": {
+          "cnpj": "98765432000100",
+          "razao_social": "CLIENTE TESTE S.A."
+        },
+        "itens": [
+          {
+            "codigo": "001",
+            "descricao": "Produto Teste A",
+            "ncm": "12345678",
+            "cfop": "5102",
+            "quantidade": 2,
+            "valor_unitario": 100.0,
+            "valor_total": 200.0
+          },
+          {
+            "codigo": "002",
+            "descricao": "Produto Teste B",
+            "ncm": "87654321",
+            "cfop": "5102",
+            "quantidade": 1,
+            "valor_unitario": 300.0,
+            "valor_total": 300.0
+          }
+        ],
+        "total": 500.0,
+        "impostos": {
+          "icms": {
+            "cst": "00",
+            "aliquota": 18.0,
+            "valor": 90.0
+          },
+          "pis": {
+            "cst": "01",
+            "aliquota": 1.65,
+            "valor": 8.25
+          },
+          "cofins": {
+            "cst": "01",
+            "aliquota": 7.6,
+            "valor": 38.0
+          }
+        }
+      },
+      "validation_status": "success",
+      "validation_details": {
+        "issues": [],
+        "warnings": [],
+        "validations": {
+          "emitente": {
+            "cnpj": true,
+            "razao_social": true
+          },
+          "itens": {
+            "has_items": true,
+            "all_valid": true
+          },
+          "totais": {
+            "valid": true
+          }
+        }
+      },
+      "classification": {
+        "tipo": "venda",
+        "categoria": "mercadorias",
+        "confianca": 0.95,
+        "modelo": "gemini-1.5-flash",
+        "validacao": {
+          "status": "success",
+          "issues": [],
+          "warnings": [],
+          "validations": {
+            "emitente": {
+              "cnpj": true,
+              "razao_social": true
+            },
+            "itens": {
+              "has_items": true,
+              "all_valid": true
+            },
+            "totais": {
+              "valid": true
+            }
+          }
+        }
+      },
+      "raw_text": "<xml><nfe>simulated</nfe></xml>",
+      "uploaded_at": "2025-10-27T13:55:55.230809+00:00",
+      "processed_at": "2025-10-27T13:55:55.230833+00:00",
+      "metadata": {
+        "has_issues": false,
+        "has_warnings": false,
+        "item_count": 2,
+        "document_subtype": "NFe"
+      },
+      "id": "7",
+      "created_at": "2025-10-27T13:55:55.233585+00:00"
+    },
+    {
+      "file_name": "final_test.xml",
+      "document_type": "NFe",
+      "document_number": "88888",
+      "issuer_cnpj": "12345678000199",
+      "issuer_name": "Empresa Final Teste Ltda",
+      "recipient_cnpj": "98765432000100",
+      "recipient_name": "Cliente Final Teste S.A.",
+      "issue_date": "2025-08-28T00:00:00Z",
+      "total_value": 1000.0,
+      "cfop": "5102",
+      "extracted_data": {
+        "document_type": "NFe",
+        "numero": "77777",
+        "emitente": {
+          "cnpj": "12345678000199",
+          "razao_social": "Teste"
+        },
+        "itens": [
+          {
+            "descricao": "Teste",
+            "ncm": "12345678",
+            "cfop": "5102",
+            "quantidade": 1,
+            "valor_unitario": 100,
+            "valor_total": 100
+          }
+        ],
+        "total": 100,
+        "impostos": {
+          "icms": {
+            "cst": "00",
+            "aliquota": 18,
+            "valor": 18
+          },
+          "pis": {
+            "cst": "01",
+            "aliquota": 1.65,
+            "valor": 1.65
+          },
+          "cofins": {
+            "cst": "01",
+            "aliquota": 7.6,
+            "valor": 7.6
+          }
+        }
+      },
+      "classification": {
+        "tipo": "venda",
+        "categoria": "teste"
+      },
+      "validation_details": {
+        "tipo_documento": {
+          "tipo": "NFe",
+          "valido": true
+        },
+        "emitente": {
+          "cnpj": false,
+          "cnpj_valor": "12345678000199",
+          "razao_social": "Teste",
+          "valido": false,
+          "erro": "CNPJ do emitente inválido: 12345678000199",
+          "razao_social_valida": true
+        },
+        "itens": {
+          "quantidade": 1,
+          "has_items": true,
+          "valido": false,
+          "all_valid": false,
+          "detalhes": [
+            {
+              "numero": 1,
+              "descricao_valida": true,
+              "ncm_valido": false,
+              "cfop": "5102",
+              "tipo_operacao": "venda",
+              "descricao_cfop": "Venda de mercadoria adquirida ou recebida de terceiros",
+              "cfop_valido": true,
+              "quantidade": 1.0,
+              "valor_unitario": 100.0,
+              "valor_total": 100.0,
+              "quantidade_valida": true,
+              "valor_unitario_valido": true,
+              "valor_total_valido": true,
+              "valido": false
+            }
+          ]
+        },
+        "totals": {
+          "total_documento": 100.0,
+          "total_calculado": 100.0,
+          "diferenca": 0.0,
+          "valid": true
+        },
+        "totais": {
+          "total_documento": 100.0,
+          "total_calculado": 100.0,
+          "diferenca": 0.0,
+          "valid": true
+        },
+        "cfop_valido": false,
+        "impostos": {
+          "icms": {
+            "tributacao": "Regime Normal",
+            "cst": "00"
+          },
+          "pis": {
+            "cst": "01",
+            "aliquota": 1.65,
+            "valor": 1.65
+          },
+          "cofins": {
+            "cst": "01",
+            "aliquota": 7.6,
+            "valor": 7.6
+          }
+        },
+        "identificacao": {
+          "numero": "77777",
+          "serie": null,
+          "numero_valido": true,
+          "serie_valida": false
+        },
+        "data_emissao": {
+          "valor": null,
+          "valido": false
+        }
+      },
+      "validation_status": "error",
+      "metadata": {
+        "has_issues": true,
+        "item_count": 1
+      },
+      "id": "8",
+      "created_at": "2025-10-27T13:57:11.860044+00:00"
+    },
+    {
+      "file_name": "datetime_test.xml",
+      "document_type": "NFe",
+      "document_number": "99999",
+      "issuer_cnpj": "12345678000199",
+      "issue_date": "28/08/2025",
+      "total_value": 1000.0,
+      "extracted_data": {
+        "emitente": {
+          "cnpj": "12345678000199",
+          "razao_social": "Teste Ltda"
+        },
+        "itens": [
+          {
+            "descricao": "Produto teste",
+            "valor": 1000.0
+          }
+        ]
+      },
+      "classification": {
+        "tipo": "venda",
+        "categoria": "teste"
+      },
+      "validation_details": {
+        "issues": [],
+        "warnings": [],
+        "validations": {}
+      },
+      "metadata": {
+        "has_issues": false,
+        "item_count": 1
+      },
+      "id": "9",
+      "created_at": "2025-10-27T14:03:17.031907+00:00"
+    },
+    {
+      "file_name": "41250805584042000564550010000166871854281592 nfe_page-0001.jpg",
+      "document_type": "NFe",
+      "document_number": "16.687",
+      "issuer_cnpj": "05.584.042/0005-64",
+      "issuer_name": "EDITORA FUNDAMENTO EDUCACIONAL LTDA",
+      "recipient_cnpj": "057.987.817-12",
+      "recipient_name": "Fabio Dias Rhein",
+      "issue_date": "2025-08-28T00:00:00Z",
+      "total_value": 38.57,
+      "extracted_data": {
+        "numero": "16.687",
+        "data_emissao": "28/08/2025",
+        "emitente": {
+          "razao_social": "EDITORA FUNDAMENTO EDUCACIONAL LTDA",
+          "cnpj": "05.584.042/0005-64",
+          "inscricao_estadual": "91140040-54"
+        },
+        "destinatario": {
+          "razao_social": "Fabio Dias Rhein",
+          "cnpj_cpf": "057.987.817-12"
+        },
+        "itens": [
+          {
+            "descricao": "GATINHA HARMONIA: NAO SE PREOCUPE, AMIGO\\!",
+            "quantidade": 1,
+            "valor_unitario": 38.57,
+            "valor_total": 38.57
+          }
+        ],
+        "impostos": {
+          "icms": 0.0,
+          "pis": 0.0,
+          "cofins": null,
+          "ipi": 0.0
+        },
+        "total": 38.57
+      },
+      "validation_status": "error",
+      "validation_details": {
+        "issues": [
+          "classification_error: Falha na classificação: cannot access local variable 'icms_st' where it is not associated with a value"
+        ],
+        "warnings": [],
+        "validations": {
+          "emitente": {
+            "cnpj": true,
+            "razao_social": true
+          },
+          "destinatario": {
+            "cnpj": false,
+            "razao_social": true
+          },
+          "itens": {
+            "has_items": true,
+            "all_valid": false
+          },
+          "totais": {
+            "valid": true
+          }
+        }
+      },
+      "classification": {
+        "tipo": "venda",
+        "categoria": "mercadorias",
+        "confianca": 0.95,
+        "modelo": "gemini-1.5-flash",
+        "validacao": {
+          "status": "error",
+          "issues": [
+            "classification_error: Falha na classificação: cannot access local variable 'icms_st' where it is not associated with a value"
+          ],
+          "warnings": [],
+          "validations": {
+            "emitente": {
+              "cnpj": true,
+              "razao_social": true
+            },
+            "destinatario": {
+              "cnpj": false,
+              "razao_social": true
+            },
+            "itens": {
+              "has_items": true,
+              "all_valid": false
+            },
+            "totais": {
+              "valid": true
+            }
+          }
+        }
+      },
+      "raw_text": "",
+      "uploaded_at": "2025-10-27T14:04:02.457503+00:00",
+      "processed_at": "2025-10-27T14:04:02.457515+00:00",
+      "metadata": {
+        "has_issues": true,
+        "has_warnings": false,
+        "item_count": 1,
+        "document_subtype": "NFe"
+      },
+      "id": "10",
+      "created_at": "2025-10-27T14:04:02.460082+00:00"
+    },
+    {
+      "file_name": "41250805584042000564550010000166871854281592 nfe_page-0001.jpg",
+      "document_type": "NFe",
+      "document_number": "16.687",
+      "issuer_cnpj": "05.584.042/0005-64",
+      "issuer_name": "EDITORA FUNDAMENTO EDUCACIONAL LTDA",
+      "recipient_cnpj": "057.987.817-12",
+      "recipient_name": "Fabio Dias Rhein",
+      "issue_date": "2025-08-28T00:00:00Z",
+      "total_value": 38.57,
+      "extracted_data": {
+        "numero": "16.687",
+        "data_emissao": "28/08/2025",
+        "emitente": {
+          "razao_social": "EDITORA FUNDAMENTO EDUCACIONAL LTDA",
+          "cnpj": "05.584.042/0005-64",
+          "inscricao_estadual": "91140040-54"
+        },
+        "destinatario": {
+          "razao_social": "Fabio Dias Rhein",
+          "cnpj_cpf": "057.987.817-12"
+        },
+        "itens": [
+          {
+            "descricao": "GATINHA HARMONIA: NAO SE PREOCUPE, AMIGO\\!",
+            "quantidade": 1,
+            "valor_unitario": 38.57,
+            "valor_total": 38.57
+          }
+        ],
+        "impostos": {
+          "icms": 0.0,
+          "pis": 0.0,
+          "cofins": null,
+          "ipi": 0.0
+        },
+        "total": 38.57
+      },
+      "classification": {
+        "tipo": "venda",
+        "categoria": "mercadorias",
+        "confianca": 0.95,
+        "modelo": "gemini-1.5-flash",
+        "validacao": {
+          "status": "error",
+          "issues": [
+            "classification_error: Falha na classificação: cannot access local variable 'icms_st' where it is not associated with a value"
+          ],
+          "warnings": [],
+          "validations": {
+            "emitente": {
+              "cnpj": true,
+              "razao_social": true
+            },
+            "destinatario": {
+              "cnpj": false,
+              "razao_social": true
+            },
+            "itens": {
+              "has_items": true,
+              "all_valid": false
+            },
+            "totais": {
+              "valid": true
+            }
+          }
+        }
+      },
+      "validation_status": "error",
+      "validation_details": {
+        "issues": [
+          "classification_error: Falha na classificação: cannot access local variable 'icms_st' where it is not associated with a value"
+        ],
+        "warnings": [],
+        "validations": {
+          "emitente": {
+            "cnpj": true,
+            "razao_social": true
+          },
+          "destinatario": {
+            "cnpj": false,
+            "razao_social": true
+          },
+          "itens": {
+            "has_items": true,
+            "all_valid": false
+          },
+          "totais": {
+            "valid": true
+          }
+        }
+      },
+      "raw_text": "",
+      "metadata": {
+        "has_issues": true,
+        "has_warnings": false,
+        "item_count": 1,
+        "document_subtype": "NFe"
+      },
+      "id": "11",
+      "created_at": "2025-10-27T14:06:57.373723+00:00"
+    },
+    {
+      "file_name": "41250805584042000564550010000166871854281592 nfe_page-0001.jpg",
+      "document_type": "NFe",
+      "document_number": "16.687",
+      "issuer_cnpj": "05584042000564",
+      "issuer_name": "EDITORA FUNDAMENTO EDUCACIONAL LTDA",
+      "recipient_cnpj": "05798781712",
+      "recipient_name": "Fabio Dias Rhein",
+      "issue_date": "2025-08-28T00:00:00Z",
+      "total_value": 38.57,
+      "extracted_data": {
+        "document_type": "NFe",
+        "numero": "16.687",
+        "emitente": {
+          "cnpj": "05584042000564",
+          "razao_social": "EDITORA FUNDAMENTO EDUCACIONAL LTDA"
+        },
+        "destinatario": {
+          "razao_social": "Fabio Dias Rhein",
+          "cnpj_cpf": "05798781712"
+        },
+        "itens": [
+          {
+            "descricao": "GATINHA HARMONIA",
+            "quantidade": 1,
+            "valor_unitario": 38.57,
+            "valor_total": 38.57
+          }
+        ],
+        "total": 38.57,
+        "impostos": {
+          "icms": 0.0,
+          "pis": 0.0,
+          "cofins": null,
+          "ipi": 0.0
+        }
+      },
+      "classification": {
+        "tipo": "venda",
+        "categoria": "livros"
+      },
+      "validation_status": "success",
+      "validation_details": {
+        "tipo_documento": {
+          "tipo": "NFe",
+          "valido": true
+        },
+        "emitente": {
+          "cnpj": true,
+          "cnpj_valor": "05584042000564",
+          "razao_social": "EDITORA FUNDAMENTO EDUCACIONAL LTDA",
+          "valido": true,
+          "razao_social_valida": true
+        },
+        "destinatario": {
+          "identificacao": "",
+          "tipo": "CPF",
+          "valido": false
+        },
+        "itens": {
+          "quantidade": 1,
+          "has_items": true,
+          "valido": false,
+          "all_valid": false,
+          "detalhes": [
+            {
+              "numero": 1,
+              "descricao_valida": true,
+              "ncm_valido": false,
+              "cfop_valido": false,
+              "quantidade": 1.0,
+              "valor_unitario": 38.57,
+              "valor_total": 38.57,
+              "quantidade_valida": true,
+              "valor_unitario_valido": true,
+              "valor_total_valido": true,
+              "valido": false
+            }
+          ]
+        },
+        "totals": {
+          "total_documento": 38.57,
+          "total_calculado": 38.57,
+          "diferenca": 0.0,
+          "valid": true
+        },
+        "totais": {
+          "total_documento": 38.57,
+          "total_calculado": 38.57,
+          "diferenca": 0.0,
+          "valid": true
+        },
+        "cfop_valido": false,
+        "impostos": {},
+        "identificacao": {
+          "numero": "16.687",
+          "serie": null,
+          "numero_valido": true,
+          "serie_valida": false
+        },
+        "data_emissao": {
+          "valor": null,
+          "valido": false
+        }
+      },
+      "metadata": {
+        "has_issues": true,
+        "item_count": 1
+      },
+      "id": "12",
+      "created_at": "2025-10-27T14:08:46.336897+00:00"
+    },
+    {
+      "file_name": "validation_test.xml",
+      "document_type": "NFe",
+      "document_number": "99999",
+      "issuer_cnpj": "12345678000195",
+      "issuer_name": "Emitente Teste Ltda",
+      "recipient_cnpj": "98765432000100",
+      "recipient_name": "Destinatário Teste S.A.",
+      "issue_date": "28/08/2025",
+      "total_value": 1000.0,
+      "cfop": "5102",
+      "extracted_data": {
+        "emitente": {
+          "cnpj": "12345678000195",
+          "razao_social": "Emitente Teste Ltda"
+        },
+        "destinatario": {
+          "cnpj": "98765432000100",
+          "razao_social": "Destinatário Teste S.A."
+        },
+        "itens": [
+          {
+            "descricao": "Produto teste",
+            "valor": 1000.0
+          }
+        ]
+      },
+      "classification": {
+        "tipo": "venda",
+        "categoria": "mercadorias"
+      },
+      "validation_details": {
+        "status": "success",
+        "issues": [],
+        "warnings": []
+      },
+      "metadata": {
+        "has_issues": false,
+        "item_count": 1
+      },
+      "id": "13",
+      "created_at": "2025-10-27T14:23:21.462149+00:00"
+    },
+    {
+      "file_name": "test_recipient.xml",
+      "document_type": "NFe",
+      "document_number": "99999",
+      "issuer_cnpj": "12345678000195",
+      "recipient_cnpj": "98765432000100",
+      "recipient_name": "Cliente Teste",
+      "issue_date": "28/08/2025",
+      "total_value": 100.0,
+      "extracted_data": {
+        "test": true
+      },
+      "metadata": {
+        "has_issues": false
+      },
+      "id": "14",
+      "created_at": "2025-10-27T14:26:41.672605+00:00"
+    }
+  ],
+  "next_id": 15
+}

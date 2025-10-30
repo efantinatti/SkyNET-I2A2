@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdfeProc versao="3.00" xmlns="http://www.portalfiscal.inf.br/mdfe">
+  <MDFe>
+    <infMDFe Id="MDFe35200644681160000104570010000000011000000013" versao="3.00">
+      <ide>
+        <cUF>35</cUF>
+        <tpAmb>1</tpAmb>
+        <tpEmit>1</tpEmit>
+        <mod>58</mod>
+        <serie>1</serie>
+        <nMDF>1</nMDF>
+        <cMDF>12345678</cMDF>
+        <cDV>3</cDV>
+        <modal>1</modal>
+        <dhEmi>2020-10-01T10:30:10-03:00</dhEmi>
+        <tpEmis>1</tpEmis>
+        <procEmi>0</procEmi>
+        <verProc>1.0</verProc>
+        <UFIni>SP</UFIni>
+        <UFFim>SP</UFFim>
+        <dhIniViagem>2020-10-01T10:30:10-03:00</dhIniViagem>
+      </ide>
+      <emit>
+        <CNPJ>12345678000123</CNPJ>
+        <IE>123456789012</IE>
+        <xNome>TRANSPORTADORA TESTE LTDA</xNome>
+        <xFant>TRANSPORTE TESTE</xFant>
+        <enderEmit>
+          <xLgr>RUA DAS PALMEIRAS</xLgr>
+          <nro>1000</nro>
+          <xBairro>JD DAS ARVORES</xBairro>
+          <cMun>3550308</cMun>
+          <xMun>SAO PAULO</xMun>
+          <UF>SP</UF>
+          <CEP>01310000</CEP>
+        </enderEmit>
+      </emit>
+      <infModal versaoModal="3.00">
+        <rodo>
+          <infANTT>
+            <RNTRC>12345678</RNTRC>
+          </infANTT>
+          <veicTracao>
+            <cInt>001</cInt>
+            <placa>ABC1D23</placa>
+            <tara>0</tara>
+            <capKG>10000</capKG>
+            <tpRod>02</tpRod>
+            <tpCar>02</tpCar>
+            <UF>SP</UF>
+          </veicTracao>
+          <veicReboque>
+            <cInt>001</cInt>
+            <placa>XYZ9Z99</placa>
+            <UF>SP</UF>
+            <tara>0</tara>
+            <capKG>10000</capKG>
+            <tpCar>02</tpCar>
+          </veicReboque>
+          <lacRodo>
+            <nLacre>123456</nLacre>
+            <nLacre>654321</nLacre>
+          </lacRodo>
+        </rodo>
+      </infModal>
+      <infDoc>
+        <infMunDescarga>
+          <cMunDescarga>3550308</cMunDescarga>
+          <xMunDescarga>SAO PAULO</xMunDescarga>
+          <infCTe>
+            <chCTe>35200644681160000104570010000000011000000012</chCTe>
+            <SegCodBarra>12345678901234567890123456789012345678901234</SegCodBarra>
+            <indReentrega>0</indReentrega>
+          </infCTe>
+        </infMunDescarga>
+      </infDoc>
+      <tot>
+        <vCarga>1000.00</vCarga>
+        <cUnid>01</cUnid>
+        <qCarga>1000.0000</qCarga>
+      </tot>
+      <lacres>
+        <nLacre>123456</nLacre>
+      </lacres>
+      <autXML>
+        <CNPJ>07504505000132</CNPJ>
+      </autXML>
+      <infAdic>
+        <infCpl>Sem observações adicionais</infCpl>
+      </infAdic>
+    </infMDFe>
+  </MDFe>
+  <protMDFe versao="3.00">
+    <infProt>
+      <tpAmb>1</tpAmb>
+      <verAplic>SP_MDFE_100</verAplic>
+      <chMDFe>35200644681160000104570010000000011000000013</chMDFe>
+      <dhRecbto>2020-10-01T10:35:10-03:00</dhRecbto>
+      <nProt>135200000000003</nProt>
+      <digVal>jkl012</digVal>
+      <cStat>100</cStat>
+      <xMotivo>Autorizado o uso do MDF-e</xMotivo>
+    </infProt>
+  </protMDFe>
+</mdfeProc>

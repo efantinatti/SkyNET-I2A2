@@ -1,0 +1,12 @@
+[
+  {
+    "fiscal_document_id": "5",
+    "event_type": "validation_test",
+    "event_data": {
+      "test": true,
+      "success": true
+    },
+    "id": "99823849-db02-49a8-8292-d4e99388b7f6",
+    "created_at": "2025-10-27T13:42:14.157195+00:00"
+  }
+]
