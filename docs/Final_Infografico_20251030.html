@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infográfico: Projeção Financeira SkyNET-I2A2</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            overflow: hidden; /* Para conter os cantos arredondados */
+        }
+        header {
+            background-color: #004a99; /* Um azul escuro */
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+        .section {
+            padding: 25px 30px;
+            border-bottom: 1px solid #eee;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+        .section h2 {
+            font-size: 1.6em;
+            color: #004a99;
+            margin-top: 0;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+        .section h3 {
+            font-size: 1.2em;
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: '🤖'; /* Emoji como bullet point */
+            padding-left: 25px;
+        }
+        ul li {
+            padding-left: 10px;
+            margin-bottom: 10px;
+        }
+        ul.cost-list li {
+            list-style-type: '💲';
+        }
+        ul.sim-list li {
+            list-style-type: '📈';
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f8ff; /* Azul claro */
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .highlight-box {
+            background-color: #e6f7ff;
+            border: 2px solid #b3e0ff;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .highlight-box h3 {
+            margin: 0 0 10px 0;
+            color: #004a99;
+            font-size: 1.4em;
+        }
+        .highlight-box p {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #003366;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>📊 Infográfico: Projeção Financeira e Otimização de Custos</h1>
+            <p>Sistema: SkyNET-I2A2 (Processamento Inteligente de Documentos Fiscais)</p>
+        </header>
+
+        <div class="section">
+            <h2>1. O Sistema: SkyNET-I2A2</h2>
+            <p>Uma plataforma de IA para ingestão, validação e análise de documentos fiscais brasileiros (NFe, CTe, etc.).</p>
+            
+            <h3>Funções que consomem LLM:</h3>
+            <ul>
+                <li><strong>Chat IA Conversacional</strong> (Baseado em Gemini)</li>
+                <li><strong>Embeddings & RAG</strong> (Usa Sentence Transformers locais + fallback Gemini)</li>
+                <li><strong>Processamento Documental</strong> (OCR/XML otimiza o input <em>antes</em> do LLM)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>2. Estudo de Custo Determinístico (Cenário Base: GPT-4o)</h2>
+            <p>Baseado em uma projeção de <strong>1.000.000 de transações/dia</strong>.</p>
+
+            <h3>Consumo Médio por Transação (Ponderado):</h3>
+            <ul>
+                <li><strong>Input:</strong> 2.500 tokens</li>
+                <li><strong>Output:</strong> 350 tokens</li>
+                <li><strong>Total Médio:</strong> 2.850 tokens</li>
+            </ul>
+
+            <h3>Projeção de Custo Anual (GPT-4o):</h3>
+            <ul class="cost-list">
+                <li><strong>Diário:</strong> $17.750,00</li>
+                <li><strong>Mensal:</strong> $532.500,00</li>
+                <li><strong>Anual (Bruto):</strong> <strong>$6.478.750,00</strong></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. Comparativo de Custo por 1M de Tokens (API)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Modelo</th>
+                        <th>Preço de Input (1M tokens)</th>
+                        <th>Preço de Output (1M tokens)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>GPT-4o (OpenAI)</strong></td>
+                        <td>$5,00</td>
+                        <td>$15,00</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gemini 2.0 (Google)</strong></td>
+                        <td>❓ (Dados necessários)</td>
+                        <td>❓ (Dados necessários)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="text-align: center; margin-top: 15px; font-style: italic;">*Para completar o estudo, é necessário obter os preços de API do Gemini 2.0 (ex: 1.5 Pro).</p>
+        </div>
+
+        <div class="section">
+            <h2>4. O Próximo Nível: Simulação Estocástica (Monte Carlo)</h2>
+            <p>O custo fixo de $6.47M ignora a realidade. O volume e a complexidade dos documentos variam diariamente.</p>
+
+            <h3>O que Mudar de Fixo para Variável:</h3>
+            <ul class="sim-list">
+                <li>
+                    <strong>Volume Diário:</strong><br>
+                    <em>Antes:</em> 1.000.000 fixo<br>
+                    <em>Depois:</em> Distribuição de Probabilidade (ex: média de 900k, desvio de 150k, com picos de fechamento fiscal).
+                </li>
+                <li>
+                    <strong>Consumo de Tokens:</strong><br>
+                    <em>Antes:</em> 2.850 fixo<br>
+                    <em>Depois:</em> Distribuição de Probabilidade (refletindo a mistura de XML simples vs. PDF complexo).
+                </li>
+            </ul>
+            <p><strong>Resultado:</strong> Uma <strong>distribuição de custos anuais</strong> (um range provável) em vez de um número único.</p>
+        </div>
+
+        <div class="section">
+            <h2>5. Otimização Estratégica: Como o SkyNET-I2A2 Reduz Custos</h2>
+            <p>A arquitetura do sistema já implementa estratégias de otimização que justificam um cenário de custo reduzido.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estratégia de Otimização</th>
+                        <th>Implementação no SkyNET-I2A2</th>
+                        <th>Impacto Financeiro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. Pré-Processamento Inteligente</strong></td>
+                        <td>Usa OCR (Tesseract) e Parsers XML <em>antes</em> de enviar ao LLM.</td>
+                        <td>Reduz drasticamente os tokens de <strong>Input</strong>.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. RAG (Retrieval-Augmented Generation)</strong></td>
+                        <td>Armazena regras fiscais em vetores (pgvector) e usa intents.</td>
+                        <td>Mantém o contexto conciso, economizando tokens.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Modelos Híbridos/Gratuitos</strong></td>
+                        <td>Prioriza modelos locais (Sentence Transformers) para embeddings.</td>
+                        <td>Reserva o LLM premium (caro) apenas para raciocínio complexo.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. Respostas Estruturadas</strong></td>
+                        <td>Gera JSON ou intents específicas (resumo, validação).</td>
+                        <td>Reduz os tokens de <strong>Output</strong>.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <div class="highlight-box">
+                <h3>💰 O Valor da Otimização</h3>
+                <p>~$2.591.500,00</p>
+                <p style="font-size: 1.2em; font-weight: 500; margin-top: 10px;">Economia anual estimada com uma redução de <strong>20%</strong> no consumo de tokens.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
