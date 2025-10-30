@@ -1,0 +1,45 @@
+# Core
+toml>=0.10.2
+streamlit>=1.39.0
+streamlit-extras>=0.7.0
+python-dotenv>=1.0.1
+
+# Data processing
+pandas>=2.2.0
+numpy>=2.0.0
+
+# Document processing
+pypdf>=6.0.0
+pytesseract>=0.3.10
+pdf2image>=1.17.0
+lxml>=5.1.0
+Pillow>=10.0.0
+
+# AI/ML - Simplified (only Gemini)
+google-generativeai>=0.3.0
+langchain>=0.1.0
+langchain-google-genai>=0.0.5
+
+# Database
+psycopg2-binary>=2.9.9
+SQLAlchemy>=2.0.0
+supabase>=2.3.1
+
+# API and validation
+pydantic>=2.0.0
+requests>=2.31.0
+httpx[http2]>=0.26.0,<0.28.0  # Pinned for supafunc compatibility
+
+# Utils
+loguru>=0.7.0
+
+# Testing
+pytest>=8.0.0
+pytest-cov>=4.1.0
+pytest-mock>=3.12.0
+black>=24.0.0
+flake8>=7.0.0
+mypy>=1.8.0
+
+pytest>=7.0.0
+pytest-cov>=3.0.0
