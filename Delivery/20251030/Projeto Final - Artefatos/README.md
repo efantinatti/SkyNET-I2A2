@@ -6,6 +6,7 @@ Este diretório contém os artefatos finais do projeto do grupo SkyNET-I2A2.
 
 - [I2A2_Agentes_Inteligentes_Projeto_Final_SkyNET-I2A2.mp4](./I2A2_Agentes_Inteligentes_Projeto_Final_SkyNET-I2A2.mp4) — Vídeo do projeto
 - [I2A2_Agentes_Inteligentes_Projeto_Final_SkyNET-I2A2.pptx](./I2A2_Agentes_Inteligentes_Projeto_Final_SkyNET-I2A2.pptx) — Apresentação (PPTX)
+- [I2A2_Agentes_Inteligentes_Projeto_Final_SkyNET-I2A2.pdf](./I2A2_Agentes_Inteligentes_Projeto_Final_SkyNET-I2A2.pdf) — Relatório (PDF)
 
 > Se o navegador não iniciar o download automaticamente, clique com o botão direito no link e escolha "Salvar link como..." ou abra o link em uma nova aba.
 
